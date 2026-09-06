@@ -3,27 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Manazza | B2B Cybersecurity Messaging & Positioning</title>
+  <title>Dr. Manazza | B2B SaaS & Cybersecurity Messaging Strategist</title>
+  <meta name="description" content="Translating complex cybersecurity architecture and technical B2B SaaS into sharp, CISO-focused positioning, sales battle cards, and high-converting messaging." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --bg: #0b0f19;
-      --surface: #111827;
-      --border: #1f2937;
-      --accent: #38bdf8;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --danger: #f87171;
-      --success: #4ade80;
+      --bg: #0B0F19;
+      --card-bg: #111827;
+      --card-hover: #162032;
+      --border: #1F2937;
+      --border-light: #374151;
+      --accent: #38BDF8;
+      --accent-dim: rgba(56, 189, 248, 0.1);
+      --text: #F3F4F6;
+      --muted: #9CA3AF;
+      --danger: #F87171;
+      --danger-bg: rgba(248, 113, 113, 0.08);
+      --success: #34D399;
+      --success-bg: rgba(52, 211, 153, 0.08);
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       line-height: 1.6;
       padding: 0 1.5rem;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(17, 24, 39, 0.5) 0%, transparent 50%);
+      background-attachment: fixed;
     }
-    .container { max-width: 960px; margin: 0 auto; }
+
+    .container { max-width: 1040px; margin: 0 auto; }
+    
+    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -31,130 +51,441 @@
       padding: 2rem 0;
       border-bottom: 1px solid var(--border);
     }
-    .logo { font-weight: 700; letter-spacing: 0.05em; font-size: 1.1rem; }
+    .brand { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; color: #FFF; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    nav { display: flex; gap: 1.8rem; align-items: center; }
+    .nav-link { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-link:hover { color: #FFF; }
+    
+    /* Buttons */
     .btn {
       background: var(--accent);
-      color: #000;
-      padding: 0.6rem 1.2rem;
+      color: #040814;
+      padding: 0.75rem 1.4rem;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 0.9rem;
       text-decoration: none;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      border: 1px solid var(--accent);
+      cursor: pointer;
     }
-    .hero { padding: 4.5rem 0 3rem; }
+    .btn:hover { background: #7DD3FC; transform: translateY(-1px); box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+    .btn-secondary {
+      background: transparent;
+      color: #FFF;
+      border: 1px solid var(--border-light);
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.03); border-color: var(--accent); box-shadow: none; }
+
+    /* Hero */
+    .hero { padding: 6rem 0 4rem; }
     .badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--accent);
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 0.25rem 0.75rem;
+      background: var(--accent-dim);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 0.35rem 0.85rem;
       border-radius: 999px;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.8rem;
     }
-    h1 { font-size: 2.7rem; line-height: 1.2; margin-bottom: 1.2rem; font-weight: 800; }
-    .subhead { color: var(--muted); font-size: 1.15rem; max-width: 780px; margin-bottom: 2rem; }
-    .section-title { font-size: 1.8rem; margin: 4rem 0 1.5rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { background: var(--surface); border: 1px solid var(--border); padding: 1.8rem; border-radius: 8px; }
-    .card h3 { margin-bottom: 0.6rem; color: #fff; }
-    .card p { color: var(--muted); font-size: 0.95rem; }
-    
-    .teardown-box {
-      background: var(--surface);
+    .badge::before { content: ""; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+    h1 {
+      font-size: clamp(2.3rem, 4.8vw, 3.5rem);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+    }
+    .subhead {
+      color: var(--muted);
+      font-size: 1.2rem;
+      max-width: 780px;
+      margin-bottom: 2.2rem;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+    /* Trust Strip */
+    .trust-strip {
+      margin: 3.5rem 0 5rem;
+      padding: 1.2rem 2rem;
+      background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 8px;
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
     }
-    .teardown-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
-    .teardown-before { border-left: 3px solid var(--danger); padding-left: 1rem; margin-bottom: 1rem; }
-    .teardown-after { border-left: 3px solid var(--success); padding-left: 1rem; }
-    .teardown-before p { color: var(--muted); font-style: italic; }
-    .teardown-after p { color: #fff; font-weight: 500; }
+    .trust-title { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #FFF; font-weight: 600; }
+    .trust-pills { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .trust-pill { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
 
+    /* Section Global */
+    .section-head { margin-bottom: 2.5rem; }
+    .section-head h2 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; color: #FFF; }
+    .section-head p { color: var(--muted); margin-top: 0.4rem; font-size: 1.05rem; }
+
+    /* Cards & Grids */
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; margin-bottom: 5rem; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 8px;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--border-light); }
+    .card-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); margin-bottom: 0.8rem; }
+    .card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
+    .card p { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+
+    /* Value Transformation Flow */
+    .flow-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
+      margin-bottom: 5rem;
+    }
+    .flow-steps {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .flow-step { flex: 1; min-width: 140px; }
+    .flow-step-num { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); margin-bottom: 0.4rem; }
+    .flow-step-label { font-weight: 700; font-size: 0.95rem; color: #FFF; margin-bottom: 0.3rem; }
+    .flow-step-desc { font-size: 0.8rem; color: var(--muted); }
+
+    /* Teardown Comparisons */
+    .teardown-block {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .teardown-header { display: flex; justify-content: space-between; margin-bottom: 1.2rem; align-items: center; }
+    .teardown-title { font-weight: 700; color: #FFF; font-size: 1.1rem; }
+    .teardown-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); background: var(--accent-dim); padding: 0.2rem 0.6rem; border-radius: 4px; }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .comp-col { padding: 1.2rem; border-radius: 6px; }
+    .comp-before { background: var(--danger-bg); border-left: 3px solid var(--danger); }
+    .comp-after { background: var(--success-bg); border-left: 3px solid var(--success); }
+    .comp-flag { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .comp-before .comp-flag { color: var(--danger); }
+    .comp-after .comp-flag { color: var(--success); }
+    .comp-text { font-size: 0.9rem; line-height: 1.5; }
+
+    /* Accordion Details */
     details {
-      background: var(--surface);
+      background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 8px;
       margin-bottom: 1rem;
-      padding: 1rem 1.5rem;
+      padding: 1.2rem 1.8rem;
     }
-    summary { cursor: pointer; font-weight: 600; color: var(--accent); outline: none; }
-    .sample-content { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-    
-    footer { border-top: 1px solid var(--border); padding: 3rem 0; text-align: center; color: var(--muted); margin-top: 5rem; }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #FFF;
+      font-size: 1rem;
+      outline: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--accent); font-size: 1.2rem; }
+    details[open] summary::after { content: "−"; }
+    .details-content { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+
+    /* Lead Qualification */
+    .qual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 5rem; }
+    .qual-col { background: var(--card-bg); border: 1px solid var(--border); padding: 2rem; border-radius: 8px; }
+    .qual-col h3 { font-size: 1.1rem; margin-bottom: 1rem; }
+    .qual-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--muted); }
+    .qual-list li { display: flex; gap: 0.6rem; align-items: baseline; }
+
+    /* Footer / CTA Form Area */
+    .final-cta {
+      background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, var(--card-bg) 100%);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .final-cta h2 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .final-cta p { color: var(--muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; }
+    footer { border-top: 1px solid var(--border); padding: 3rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--text); text-decoration: none; font-weight: 600; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .comparison-grid, .qual-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .hero { padding: 4rem 0 2.5rem; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo">DR. MANAZZA</div>
-      <a href="mailto:contact@drmanazzamessaging.com" class="btn">Get in Touch</a>
+      <a href="#" class="brand">DR. MANAZZA<span>.</span></a>
+      <nav>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#approach" class="nav-link">Approach</a>
+        <a href="#qualification" class="nav-link">Fit</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+      <a href="mailto:contact@drmanazzamessaging.com" class="btn">Book a Teardown</a>
     </header>
 
     <section class="hero">
       <div class="badge">B2B SAAS & CYBERSECURITY POSITIONING</div>
       <h1>Translating Complex Technical Security into Enterprise Sales Pipeline.</h1>
       <p class="subhead">
-        I help high-growth cybersecurity & AI-driven platforms turn architectural complexity into sharp, CISO-focused positioning, sales battle cards, and high-converting web copy.
+        Helping high-growth cybersecurity & AI-driven platforms turn architectural complexity into sharp, CISO-focused positioning, sales battle cards, and high-converting web copy.
       </p>
-      <a href="mailto:contact@drmanazzamessaging.com" class="btn">Book a 15-Min Messaging Teardown</a>
+      <div class="cta-group">
+        <a href="mailto:contact@drmanazzamessaging.com?subject=15-Min%20Messaging%20Teardown" class="btn">Book a 15-Min Messaging Teardown</a>
+        <a href="#work" class="btn btn-secondary">View Work Samples</a>
+      </div>
     </section>
 
-    <h2 class="section-title">Strategic Deliverables</h2>
-    <div class="grid">
+    <div class="trust-strip">
+      <div class="trust-title">ENGINEERED FOR COMPLEX PRODUCT SUITES</div>
+      <div class="trust-pills">
+        <span class="trust-pill">• Cloud Security</span>
+        <span class="trust-pill">• SIEM / SOAR / XDR</span>
+        <span class="trust-pill">• Identity & Access (IAM)</span>
+        <span class="trust-pill">• DevSecOps</span>
+        <span class="trust-pill">• AI Telemetry</span>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>The Enterprise Sales Friction</h2>
+      <p>Your platform is technically differentiated. Your positioning should make that self-evident.</p>
+    </div>
+    <div class="grid-3">
       <div class="card">
+        <div class="card-meta">01 // THE TRANSLATION GAP</div>
+        <h3>Architecture vs. Business Risk</h3>
+        <p>Engineers build capabilities; CISOs buy risk mitigation. When websites emphasize kernel modules over audit defensibility, technical evaluation stalls.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">02 // CONVERSION LEAK</div>
+        <h3>Lost Inbound Pipeline</h3>
+        <p>Prospects leave before demo request forms because value propositions read like user documentation. High bounce rates disguise great underlying tech.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">03 // CATEGORY NOISE</div>
+        <h3>Generic Vendor Fatigue</h3>
+        <p>Enterprise buyers ignore claims of "next-gen AI-powered visibility." Differentiation disappears when copy relies on industry buzzwords instead of mechanics.</p>
+      </div>
+    </div>
+
+    <div class="flow-container">
+      <div class="section-head" style="margin-bottom: 1.5rem;">
+        <h2>The Messaging Translation Engine</h2>
+        <p>Bridging dense engineering realities with executive procurement metrics.</p>
+      </div>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">STAGE 01</div>
+          <div class="flow-step-label">Architecture</div>
+          <div class="flow-step-desc">Deep technical specs & telemetry protocols.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">STAGE 02</div>
+          <div class="flow-step-label">Operational Impact</div>
+          <div class="flow-step-desc">Alert reduction, MTTD/MTTR, engineering hours.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">STAGE 03</div>
+          <div class="flow-step-label">Executive Risk</div>
+          <div class="flow-step-desc">Regulatory compliance, breach containment, ROI.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">STAGE 04</div>
+          <div class="flow-step-label">Sales Enablement</div>
+          <div class="flow-step-desc">Field-ready battle cards & differentiator copy.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="section-head">
+      <h2>Strategic Deliverables</h2>
+      <p>High-leverage messaging frameworks built for enterprise conversion.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-meta">FLAGSHIP 01</div>
         <h3>Homepage & Funnel Architecture</h3>
-        <p>Rewriting dense security features into sharp, value-led narrative structures that resonate with enterprise buyers.</p>
+        <p>Complete structural overhaul of above-the-fold value propositions, narrative hierarchy, and conversion paths tailored for technical and economic buyers.</p>
       </div>
       <div class="card">
-        <h3>Sales Battle Cards</h3>
-        <p>Arming direct sales teams with competitive differentiator mapping against legacy solutions and commoditized vendors.</p>
+        <div class="card-meta">FLAGSHIP 02</div>
+        <h3>Enterprise Sales Battle Cards</h3>
+        <p>Tactical competitor teardowns, C-level objection handling matrices, and "Why Us" differentiator maps for direct enterprise sales reps.</p>
       </div>
       <div class="card">
-        <h3>Bottom-of-Funnel Assets</h3>
-        <p>Writing technical evaluation frameworks and case studies engineered specifically for skeptical CISOs and SOC teams.</p>
+        <div class="card-meta">FLAGSHIP 03</div>
+        <h3>Bottom-of-Funnel Case Studies</h3>
+        <p>Proof assets that walk through technical constraints, operational deployment, and tangible security posture improvements without generic fluff.</p>
       </div>
     </div>
 
-    <h2 class="section-title">Proof: Live Messaging Teardowns</h2>
-    
-    <div class="teardown-box">
-      <div class="teardown-tag" style="color: var(--accent);">Teardown Sample 01: Cloud Detection Platform</div>
-      <div class="teardown-before">
-        <div class="teardown-tag" style="color: var(--danger);">Before (Feature Jargon)</div>
-        <p>"Autonomous multi-vector eBPF-driven kernel telemetry for hybrid cloud Kubernetes workloads."</p>
+    <div id="work" class="section-head">
+      <h2>Live Teardowns & Samples</h2>
+      <p>Zero external clicks required. Direct execution of technical positioning.</p>
+    </div>
+
+    <div class="teardown-block">
+      <div class="teardown-header">
+        <div class="teardown-title">Cloud Native Runtime Security (eBPF)</div>
+        <span class="teardown-tag">HOMEPAGE TEARDOWN</span>
       </div>
-      <div class="teardown-after">
-        <div class="teardown-tag" style="color: var(--success);">After (Buyer Outcome)</div>
-        <p>"Stop Kubernetes runtime breaches in 400ms without deploying fragile kernel modules."</p>
+      <div class="comparison-grid">
+        <div class="comp-col comp-before">
+          <div class="comp-flag">Feature-Focused Jargon</div>
+          <p class="comp-text">"Autonomous multi-vector eBPF-driven kernel telemetry for distributed hybrid cloud Kubernetes clusters and serverless containers."</p>
+        </div>
+        <div class="comp-col comp-after">
+          <div class="comp-flag">CISO & Operational Value</div>
+          <p class="comp-text">"Stop active container breakouts in milliseconds without deploying intrusive kernel modules or degrading production throughput."</p>
+        </div>
       </div>
     </div>
 
-    <h2 class="section-title">Work Samples (Read in Place)</h2>
-    
+    <div class="teardown-block">
+      <div class="teardown-header">
+        <div class="teardown-title">Next-Gen SIEM & Telemetry Aggregation</div>
+        <span class="teardown-tag">SALES BATTLE CARD MATRIX</span>
+      </div>
+      <div class="comparison-grid">
+        <div class="comp-col comp-before">
+          <div class="comp-flag">Commoditized Sales Pitch</div>
+          <p class="comp-text">"Rip-and-replace your existing legacy log manager with our faster, AI-driven correlation analytics platform."</p>
+        </div>
+        <div class="comp-col comp-after">
+          <div class="comp-flag">Infiltration Positioning Strategy</div>
+          <p class="comp-text">"Route high-volume noisy telemetry through our pipeline to slash Splunk indexing licensing costs by 40% without disrupting SOC rules."</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="approach" class="section-head">
+      <h2>Strategic Engagement Framework</h2>
+      <p>Methodical execution designed to operate efficiently with technical SMEs.</p>
+    </div>
+    <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+      <div class="card">
+        <div class="card-meta">01 // DECODE</div>
+        <p style="color: #FFF; font-weight: 600;">Extract Architecture</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Review code, specs, and whitepapers to map raw product differentiators.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">02 // POSITION</div>
+        <p style="color: #FFF; font-weight: 600;">Identify Friction</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Define ICP operational triggers against existing budget items.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">03 // TRANSLATE</div>
+        <p style="color: #FFF; font-weight: 600;">Bridge Value</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Convert engineering metrics into executive business risks.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">04 // BUILD</div>
+        <p style="color: #FFF; font-weight: 600;">Execute Copy</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Draft web messaging, battle cards, and commercial enablement collateral.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">05 // REFINE</div>
+        <p style="color: #FFF; font-weight: 600;">Pressure-Test</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Align against buyer objections and direct sales field feedback.</p>
+      </div>
+    </div>
+
+    <div id="qualification" class="section-head">
+      <h2>Project Fit & Lead Qualification</h2>
+      <p>Focusing entirely on complex technical and enterprise motions.</p>
+    </div>
+    <div class="qual-grid">
+      <div class="qual-col">
+        <h3 style="color: var(--success);">High-Fit Engagements</h3>
+        <ul class="qual-list">
+          <li>✓ High-growth cybersecurity vendors, MSSPs, and MDR scale-ups.</li>
+          <li>✓ Platforms selling to CISOs, SOC Managers, and Technical Buyers.</li>
+          <li>✓ Repositioning from technical feature dumps to enterprise sales narratives.</li>
+          <li>✓ Companies with direct access to technical documentation or SME availability.</li>
+          <li>✓ High ACV products ($20k–$250k+) requiring consultative validation.</li>
+        </ul>
+      </div>
+      <div class="qual-col">
+        <h3 style="color: var(--danger);">Poor-Fit Projects</h3>
+        <ul class="qual-list">
+          <li>✗ High-volume commodity SEO blog writing or content mills.</li>
+          <li>✗ Consumer B2C applications or lifestyle products.</li>
+          <li>✗ Companies seeking generic clickbait without verified technical proof.</li>
+          <li>✗ Requests for vanity metrics without structured positioning groundwork.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="faq" class="section-head">
+      <h2>Frequently Addressed Questions</h2>
+    </div>
     <details>
-      <summary>+ Competitive Battle Card Framework (Click to expand)</summary>
-      <div class="sample-content">
-        <p><strong>Target:</strong> Enterprise SIEM Replacement</p>
-        <p><strong>Primary CISO Objection:</strong> "Migration takes 9 months and burns SecOps engineering bandwidth."</p>
-        <p><strong>Positioning Pivot:</strong> Position as a parallel telemetry layer with 0-downtime cutover rather than a total rip-and-replace.</p>
+      <summary>Can you articulate highly technical, architectural security concepts?</summary>
+      <div class="details-content">
+        Yes. The engagement focuses on understanding underlying telemetry, identity boundaries, network layers, and runtime policies directly from engineering documentation—translating them into commercial impact without dumbing down the technology.
+      </div>
+    </details>
+    <details>
+      <summary>How do you tailor messaging specifically for CISOs?</summary>
+      <div class="details-content">
+        CISOs evaluate tools based on resource utilization, total cost of ownership, risk mitigation, and audit defensibility. We eliminate marketing hyperbole and frame capabilities around MTTD/MTTR reductions and budget conservation.
+      </div>
+    </details>
+    <details>
+      <summary>Do you collaborate directly with Product Marketing & Sales Enablement?</summary>
+      <div class="details-content">
+        Yes. The messaging assets are structured to directly feed sales collateral, SDR sequences, and competitive battle cards so go-to-market teams speak the same language as the website copy.
       </div>
     </details>
 
-    <details>
-      <summary>+ Outbound Cold Pipeline Sequence (Click to expand)</summary>
-      <div class="sample-content">
-        <p><strong>Hook:</strong> Zero fluff, citing specific alert triage bottlenecks.</p>
-        <p><strong>Mechanism:</strong> Contrast compliance-driven checklists with active operational risk reduction.</p>
-        <p><strong>CTA:</strong> Peer-level positioning audit rather than a generic product demo.</p>
-      </div>
-    </details>
+    <div class="final-cta">
+      <h2>Ready to Sharpen Your Enterprise Positioning?</h2>
+      <p>If your platform is technically mature but your messaging isn't resonating with enterprise buyers, let's schedule an initial audit.</p>
+      <a href="mailto:contact@drmanazzamessaging.com?subject=15-Min%20Messaging%20Teardown" class="btn" style="font-size: 1rem; padding: 0.9rem 2rem;">Book a 15-Min Messaging Teardown</a>
+    </div>
 
     <footer>
-      <p>© 2026 Dr. Manazza. All rights reserved. • <a href="mailto:contact@drmanazzamessaging.com" style="color: var(--accent);">contact@drmanazzamessaging.com</a></p>
+      <div>© 2026 Dr. Manazza. Specialized B2B Cybersecurity Positioning.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="mailto:contact@drmanazzamessaging.com">Email Me</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
     </footer>
   </div>
 </body>
