@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Manazza | B2B Cybersecurity Messaging & Positioning</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --surface: #111827;
+      --border: #1f2937;
+      --accent: #38bdf8;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --danger: #f87171;
+      --success: #4ade80;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+    .container { max-width: 960px; margin: 0 auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-weight: 700; letter-spacing: 0.05em; font-size: 1.1rem; }
+    .btn {
+      background: var(--accent);
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .hero { padding: 4.5rem 0 3rem; }
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.2rem;
+    }
+    h1 { font-size: 2.7rem; line-height: 1.2; margin-bottom: 1.2rem; font-weight: 800; }
+    .subhead { color: var(--muted); font-size: 1.15rem; max-width: 780px; margin-bottom: 2rem; }
+    .section-title { font-size: 1.8rem; margin: 4rem 0 1.5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); padding: 1.8rem; border-radius: 8px; }
+    .card h3 { margin-bottom: 0.6rem; color: #fff; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    
+    .teardown-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+    }
+    .teardown-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .teardown-before { border-left: 3px solid var(--danger); padding-left: 1rem; margin-bottom: 1rem; }
+    .teardown-after { border-left: 3px solid var(--success); padding-left: 1rem; }
+    .teardown-before p { color: var(--muted); font-style: italic; }
+    .teardown-after p { color: #fff; font-weight: 500; }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+    }
+    summary { cursor: pointer; font-weight: 600; color: var(--accent); outline: none; }
+    .sample-content { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    
+    footer { border-top: 1px solid var(--border); padding: 3rem 0; text-align: center; color: var(--muted); margin-top: 5rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">DR. MANAZZA</div>
+      <a href="mailto:contact@drmanazzamessaging.com" class="btn">Get in Touch</a>
+    </header>
+
+    <section class="hero">
+      <div class="badge">B2B SAAS & CYBERSECURITY POSITIONING</div>
+      <h1>Translating Complex Technical Security into Enterprise Sales Pipeline.</h1>
+      <p class="subhead">
+        I help high-growth cybersecurity & AI-driven platforms turn architectural complexity into sharp, CISO-focused positioning, sales battle cards, and high-converting web copy.
+      </p>
+      <a href="mailto:contact@drmanazzamessaging.com" class="btn">Book a 15-Min Messaging Teardown</a>
+    </section>
+
+    <h2 class="section-title">Strategic Deliverables</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Homepage & Funnel Architecture</h3>
+        <p>Rewriting dense security features into sharp, value-led narrative structures that resonate with enterprise buyers.</p>
+      </div>
+      <div class="card">
+        <h3>Sales Battle Cards</h3>
+        <p>Arming direct sales teams with competitive differentiator mapping against legacy solutions and commoditized vendors.</p>
+      </div>
+      <div class="card">
+        <h3>Bottom-of-Funnel Assets</h3>
+        <p>Writing technical evaluation frameworks and case studies engineered specifically for skeptical CISOs and SOC teams.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Proof: Live Messaging Teardowns</h2>
+    
+    <div class="teardown-box">
+      <div class="teardown-tag" style="color: var(--accent);">Teardown Sample 01: Cloud Detection Platform</div>
+      <div class="teardown-before">
+        <div class="teardown-tag" style="color: var(--danger);">Before (Feature Jargon)</div>
+        <p>"Autonomous multi-vector eBPF-driven kernel telemetry for hybrid cloud Kubernetes workloads."</p>
+      </div>
+      <div class="teardown-after">
+        <div class="teardown-tag" style="color: var(--success);">After (Buyer Outcome)</div>
+        <p>"Stop Kubernetes runtime breaches in 400ms without deploying fragile kernel modules."</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Work Samples (Read in Place)</h2>
+    
+    <details>
+      <summary>+ Competitive Battle Card Framework (Click to expand)</summary>
+      <div class="sample-content">
+        <p><strong>Target:</strong> Enterprise SIEM Replacement</p>
+        <p><strong>Primary CISO Objection:</strong> "Migration takes 9 months and burns SecOps engineering bandwidth."</p>
+        <p><strong>Positioning Pivot:</strong> Position as a parallel telemetry layer with 0-downtime cutover rather than a total rip-and-replace.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>+ Outbound Cold Pipeline Sequence (Click to expand)</summary>
+      <div class="sample-content">
+        <p><strong>Hook:</strong> Zero fluff, citing specific alert triage bottlenecks.</p>
+        <p><strong>Mechanism:</strong> Contrast compliance-driven checklists with active operational risk reduction.</p>
+        <p><strong>CTA:</strong> Peer-level positioning audit rather than a generic product demo.</p>
+      </div>
+    </details>
+
+    <footer>
+      <p>© 2026 Dr. Manazza. All rights reserved. • <a href="mailto:contact@drmanazzamessaging.com" style="color: var(--accent);">contact@drmanazzamessaging.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
