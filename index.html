@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Manazza Batool | Cybersecurity Content & Messaging Strategist</title>
-  <meta name="description" content="Fixing the messaging leaks that stall enterprise cybersecurity deals. Strategic copy, battle cards, and narrative audits for high-growth tech." />
+  <meta name="description" content="Cybersecurity content and messaging strategist. Webpages, white papers, case studies, battle cards, one-pagers, email sequences, and pitch decks for high-growth security companies." />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +25,6 @@
       --danger-bg: rgba(248, 113, 113, 0.08);
       --success: #34D399;
       --success-bg: rgba(52, 211, 153, 0.08);
-      --warning: #FBBF24;
-      --warning-bg: rgba(251, 191, 36, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -45,7 +43,6 @@
 
     .container { max-width: 1040px; margin: 0 auto; }
     
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -75,7 +72,6 @@
     }
     .icon-btn:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
 
-    /* Buttons */
     .btn {
       background: var(--accent);
       color: #040814;
@@ -100,7 +96,6 @@
     }
     .btn-secondary:hover { background: rgba(255, 255, 255, 0.03); border-color: var(--accent); box-shadow: none; }
 
-    /* Hero */
     .hero { padding: 5rem 0 3.5rem; }
     .badge {
       display: inline-flex;
@@ -134,12 +129,11 @@
     }
     .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
-    /* Urgency Alert Strip */
-    .urgency-strip {
+    .insight-strip {
       margin: 2.5rem 0 4.5rem;
       padding: 1.2rem 1.6rem;
-      background: var(--warning-bg);
-      border: 1px solid rgba(251, 191, 36, 0.25);
+      background: var(--accent-dim);
+      border: 1px solid rgba(56, 189, 248, 0.25);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -147,14 +141,12 @@
       color: #F3F4F6;
       font-size: 0.95rem;
     }
-    .urgency-strip strong { color: var(--warning); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+    .insight-strip strong { color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
 
-    /* Section Global */
     .section-head { margin-bottom: 2.2rem; }
     .section-head h2 { font-size: 1.95rem; font-weight: 800; letter-spacing: -0.02em; color: #FFF; }
     .section-head p { color: var(--muted); margin-top: 0.4rem; font-size: 1.05rem; }
 
-    /* The Real Cost Matrix */
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.4rem; margin-bottom: 5rem; }
     .card {
       background: var(--card-bg);
@@ -168,7 +160,6 @@
     .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
     .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
 
-    /* Live Teardown Comparisons */
     .teardown-block {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -188,7 +179,18 @@
     .comp-after .comp-flag { color: var(--success); }
     .comp-text { font-size: 0.9rem; line-height: 1.5; }
 
-    /* Deliverables Grid */
+    .sample-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .sample-link:hover { text-decoration: underline; }
+
     .grid-services { 
       display: grid; 
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -196,8 +198,7 @@
       margin-bottom: 5rem; 
     }
 
-    /* Teardown Diagnostic CTA Block */
-    .audit-offer-box {
+    .contact-box {
       background: linear-gradient(180deg, rgba(56, 189, 248, 0.08) 0%, rgba(17, 24, 39, 0.8) 100%);
       border: 1px solid var(--accent);
       border-radius: 12px;
@@ -205,14 +206,10 @@
       margin-bottom: 5rem;
       text-align: center;
     }
-    .audit-offer-box h2 { font-size: 2.1rem; color: #FFF; margin-bottom: 0.8rem; }
-    .audit-offer-box p { color: var(--muted); max-width: 680px; margin: 0 auto 1.8rem; font-size: 1.05rem; }
-    .audit-points { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .audit-pt { font-size: 0.9rem; color: #FFF; display: flex; align-items: center; gap: 0.5rem; }
-    .audit-pt span { color: var(--accent); font-weight: bold; }
+    .contact-box h2 { font-size: 2.1rem; color: #FFF; margin-bottom: 0.8rem; }
+    .contact-box p { color: var(--muted); max-width: 680px; margin: 0 auto 1.8rem; font-size: 1.05rem; }
 
-    /* Contact Form Box */
-    .form-box { max-width: 580px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-box { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; text-align: left; }
     .form-group label { font-size: 0.85rem; font-weight: 600; color: #FFF; font-family: 'JetBrains Mono', monospace; }
     .form-input, .form-textarea {
@@ -229,7 +226,6 @@
     .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
     .form-textarea { resize: vertical; min-height: 100px; }
 
-    /* Footer */
     footer { 
       border-top: 1px solid var(--border); 
       padding: 3rem 0; 
@@ -248,137 +244,129 @@
       .comparison-grid { grid-template-columns: 1fr; }
       nav { display: none; }
       .hero { padding: 3.5rem 0 2rem; }
-      .urgency-strip { flex-direction: column; align-items: flex-start; }
+      .insight-strip { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
     <header>
       <a href="#" class="brand">DR. MANAZZA BATOOL<span>.</span></a>
       <nav>
-        <a href="#audit" class="nav-link">Free Audit</a>
-        <a href="#services" class="nav-link">Deliverables</a>
-        <a href="#work" class="nav-link">Teardowns</a>
-        <a href="#leaks" class="nav-link">Pipeline Leaks</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#approach" class="nav-link">Approach</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="nav-actions">
-        <!-- Direct Email Icon -->
         <a href="mailto:contact@drmanazzamessaging.com" class="icon-btn" title="Direct Email">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
-        <!-- LinkedIn Link -->
         <a href="https://www.linkedin.com/in/dr-manazza-batool/" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn Profile">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
         </a>
-        <a href="#audit" class="btn" style="padding: 0.6rem 1.1rem;">Claim 1-Page Audit</a>
+        <a href="#contact" class="btn" style="padding: 0.6rem 1.1rem;">Get In Touch</a>
       </div>
     </header>
 
-    <!-- Hero Section (High-Urgency & Human) -->
     <section class="hero">
-      <div class="badge">B2B CYBERSECURITY MESSAGING AUDITOR & STRATEGIST</div>
-      <h1>Your Product Out-Engineers Competitors. Your Copy Is Losing The Deal Before The Demo.</h1>
+      <div class="badge">CYBERSECURITY CONTENT & MESSAGING STRATEGIST</div>
+      <h1>I Turn Technical Security Complexity Into Messaging That Converts.</h1>
       <p class="subhead">
-        Most cybersecurity platforms leak qualified enterprise pipeline because their messaging reads like internal API documentation. I audit the flaws stalling your pipeline and rewrite your website, sales battle cards, and outbound copy to speak fluent CISO.
+        I help high-growth cybersecurity and SaaS companies translate dense technical architecture into sharp, CISO-focused positioning — across webpages, white papers, case studies, battle cards, one-pagers, email sequences, and pitch decks.
       </p>
       <div class="cta-group">
-        <a href="#audit" class="btn">Get a Free 1-Page Messaging Flaw Audit</a>
-        <a href="#work" class="btn btn-secondary">See Teardown Samples</a>
+        <a href="#contact" class="btn">Let's Talk About Your Team's Messaging</a>
+        <a href="#work" class="btn btn-secondary">View My Work</a>
       </div>
     </section>
 
-    <!-- Urgency Strip -->
-    <div class="urgency-strip">
-      <strong>THE SILENT LEAK:</strong>
+    <div class="insight-strip">
+      <strong>WHY THIS MATTERS:</strong>
       <span>CISOs spend under 12 seconds evaluating a homepage before bouncing. If they don't see risk reduction in two sentences, they stick with their legacy incumbent.</span>
     </div>
 
-    <!-- The Missing Flaws: Where Founders Bleed Revenue -->
-    <div id="leaks" class="section-head">
-      <h2>Where Enterprise Deals Are Slipping Through</h2>
-      <p>Three friction points I diagnose and dismantle in cybersecurity sales cycles.</p>
+    <div id="approach" class="section-head">
+      <h2>Where Enterprise Deals Slip Through Messaging</h2>
+      <p>Three friction points I look for in cybersecurity sales and marketing copy.</p>
     </div>
     <div class="grid-3">
       <div class="card">
-        <div class="card-meta">PIPELINE KILLER 01</div>
+        <div class="card-meta">FRICTION POINT 01</div>
         <h3>The "Engineering Dump" Trap</h3>
-        <p>Your engineers built brilliant low-level telemetry. But when your hero section says "Multi-tenant eBPF distributed engine," CISOs close the tab. They don't buy code; they buy lower insurance premiums and fewer midnight incidents.</p>
+        <p>Brilliant low-level telemetry described as "multi-tenant eBPF distributed engine" loses CISOs fast. They don't buy code; they buy lower risk and fewer midnight incidents.</p>
       </div>
       <div class="card">
-        <div class="card-meta">PIPELINE KILLER 02</div>
+        <div class="card-meta">FRICTION POINT 02</div>
         <h3>The Unwinnable Demo Call</h3>
-        <p>Your sales reps spend the first 20 minutes explaining <em>what the product actually does</em> instead of closing. When copy fails to pre-educate buyers, discovery calls turn into defensive lectures.</p>
+        <p>When copy fails to pre-educate buyers, sales reps spend the first 20 minutes explaining what the product does instead of closing.</p>
       </div>
       <div class="card">
-        <div class="card-meta">PIPELINE KILLER 03</div>
+        <div class="card-meta">FRICTION POINT 03</div>
         <h3>The Commodity Vacuum</h3>
-        <p>Calling yourself "AI-powered, unified, proactive security" puts you in the exact same pile as 200 other vendors. Without sharp objection handling, buyers default to familiar giants (CrowdStrike, Palo Alto, Splunk).</p>
+        <p>"AI-powered, unified, proactive security" reads the same as 200 other vendors. Without sharp differentiation, buyers default to familiar incumbents.</p>
       </div>
     </div>
 
-    <!-- What I Deliver (The 7 Core Deliverables) -->
     <div id="services" class="section-head">
-      <h2>Commercial Assets Built For Closed Deals</h2>
-      <p>Seven sales-supporting deliverables engineered to accelerate deal velocity.</p>
+      <h2>What I Do</h2>
+      <p>Seven core deliverables built for cybersecurity sales and marketing teams.</p>
     </div>
     <div class="grid-services">
       <div class="card">
         <div class="card-meta">01 // CORE POSITIONING</div>
-        <h3>Webpage & Funnel Overhaul</h3>
-        <p>Homepage and landing page copy structured to convert skeptical technical evaluators into high-intent inbound demos.</p>
+        <h3>Webpage & Funnel Copy</h3>
+        <p>Homepage and landing page copy structured to convert technical evaluators into high-intent inbound demos.</p>
       </div>
       <div class="card">
         <div class="card-meta">02 // BUYER DEFENSE</div>
-        <h3>Authoritative White Papers</h3>
-        <p>Ditching dry academic PDF templates. White papers written to help your internal champion defend your budget in committee meetings.</p>
+        <h3>White Papers</h3>
+        <p>Dense technical documentation distilled into authoritative assets that help internal champions defend budget in committee meetings.</p>
       </div>
       <div class="card">
         <div class="card-meta">03 // PROOF ASSETS</div>
-        <h3>Hard-Proof Case Studies</h3>
-        <p>Direct architectural constraint &rarr; SOC deployment timeline &rarr; financial audit signoff. Zero fluffy testimonials.</p>
+        <h3>Case Studies</h3>
+        <p>Architectural constraint &rarr; deployment timeline &rarr; measurable outcome. Real proof, no fluffy testimonials.</p>
       </div>
       <div class="card">
         <div class="card-meta">04 // FIELD ENABLEMENT</div>
-        <h3>Enterprise Sales Battle Cards</h3>
-        <p>Tactical competitor displacement matrices that give direct sales reps the exact scripts to disarm incumbent objections.</p>
+        <h3>Sales Battle Cards</h3>
+        <p>Competitor displacement matrices that give sales reps the exact scripts to handle incumbent objections.</p>
       </div>
       <div class="card">
         <div class="card-meta">05 // PROCUREMENT ASSETS</div>
-        <h3>CISO One-Pagers</h3>
-        <p>1-page executive evaluation summaries engineered to get purchasing committee signatures without friction.</p>
+        <h3>One-Pagers</h3>
+        <p>Executive evaluation summaries built for security committee sign-off, without friction.</p>
       </div>
       <div class="card">
         <div class="card-meta">06 // OUTBOUND</div>
-        <h3>SecOps Email Sequences</h3>
-        <p>Cold outbound that calls out real operational headaches (alert volume, false VPC flows) instead of spammy "coffee chat" invites.</p>
+        <h3>Email Sequencing</h3>
+        <p>Cold outbound and nurture sequences that speak to real operational headaches, not spammy pitch templates.</p>
       </div>
       <div class="card" style="grid-column: 1 / -1;">
         <div class="card-meta">07 // CAPITAL & EXPANSION</div>
-        <h3>Technical Pitch Decks</h3>
-        <p>Enterprise and investor decks translating hard architectural defensibility into massive ARR potential.</p>
+        <h3>Pitch Decks</h3>
+        <p>Investor and enterprise decks that translate technical depth into a compelling growth or funding narrative.</p>
       </div>
     </div>
 
-    <!-- Live Execution Teardowns -->
     <div id="work" class="section-head">
-      <h2>Live Teardowns: Before vs. After</h2>
-      <p>Real examples of diagnosing broken copy and turning it into revenue messaging.</p>
+      <h2>Sample Work: Before vs. After</h2>
+      <p>Examples of turning technical copy into clear, conversion-focused messaging.</p>
     </div>
 
     <div class="teardown-block">
       <div class="teardown-header">
         <div class="teardown-title">Webpage Copy // Runtime Container Security</div>
-        <span class="teardown-tag">HOMEPAGE TEARDOWN</span>
+        <span class="teardown-tag">HOMEPAGE</span>
       </div>
       <div class="comparison-grid">
         <div class="comp-col comp-before">
-          <div class="comp-flag">Broken (Feature Dump)</div>
+          <div class="comp-flag">Before (Feature Dump)</div>
           <p class="comp-text">"Autonomous multi-vector eBPF-driven kernel telemetry for distributed hybrid cloud Kubernetes clusters and serverless containers."</p>
         </div>
         <div class="comp-col comp-after">
-          <div class="comp-flag">Fixed (Operational Outcome)</div>
+          <div class="comp-flag">After (Operational Outcome)</div>
           <p class="comp-text">"Stop active container breakouts in milliseconds without deploying intrusive kernel modules or bottlenecking production workloads."</p>
         </div>
       </div>
@@ -387,59 +375,57 @@
     <div class="teardown-block">
       <div class="teardown-header">
         <div class="teardown-title">Sales Enablement // SIEM & Telemetry Aggregation</div>
-        <span class="teardown-tag">BATTLE CARD STRATEGY</span>
+        <span class="teardown-tag">BATTLE CARD</span>
       </div>
       <div class="comparison-grid">
         <div class="comp-col comp-before">
-          <div class="comp-flag">Broken (Commodity Pitch)</div>
+          <div class="comp-flag">Before (Commodity Pitch)</div>
           <p class="comp-text">"Rip-and-replace your existing legacy log manager with our faster, AI-driven correlation analytics platform."</p>
         </div>
         <div class="comp-col comp-after">
-          <div class="comp-flag">Fixed (Wedge Positioning)</div>
+          <div class="comp-flag">After (Wedge Positioning)</div>
           <p class="comp-text">"Position as a pre-ingestion pipeline filter that slashes Splunk licensing costs by 40% in 48 hours without touching existing SOC detection rules."</p>
         </div>
       </div>
     </div>
 
-    <!-- The 1-Page Audit Diagnostic Form -->
-    <div id="audit" class="audit-offer-box">
-      <h2>Request a Free 1-Page Messaging Flaw Audit</h2>
-      <p>
-        Drop your website URL below. I will personally review your above-the-fold value proposition, identify where you're bleeding pipeline to incumbents, and send you a custom 1-page teardown doc. No automated tools, no fluff.
-      </p>
-
-      <div class="audit-points">
-        <div class="audit-pt"><span>✓</span> 48-Hour Turnaround</div>
-        <div class="audit-pt"><span>✓</span> CISO Buyer Perspective</div>
-        <div class="audit-pt"><span>✓</span> 3 Concrete Fixes Included</div>
+    <!-- TODO: Add your 2-3 real case studies / email sequences here as PDF links, e.g.:
+    <div class="teardown-block">
+      <div class="teardown-header">
+        <div class="teardown-title">Case Study // [Client Name]</div>
+        <span class="teardown-tag">CASE STUDY</span>
       </div>
+      <p class="comp-text" style="margin-bottom: 1rem; color: var(--muted);">[1-2 line summary of the problem and result, e.g. conversion increase]</p>
+      <a href="[link to PDF]" target="_blank" class="sample-link">View Full Case Study →</a>
+    </div>
+    -->
+
+    <div id="contact" class="contact-box">
+      <h2>Let's Build Messaging That Converts</h2>
+      <p>
+        Whether you're hiring for a content or messaging role, or need help sharpening your positioning — I'd love to hear what you're working on.
+      </p>
 
       <form class="form-box" action="https://formspree.io/f/munazzabatool01@gmail.com" method="POST">
         <div class="form-group">
           <label>YOUR NAME</label>
-          <input type="text" name="name" class="form-input" placeholder="e.g. Alex Vance (Founder / CMO)" required />
+          <input type="text" name="name" class="form-input" placeholder="e.g. Alex Vance" required />
         </div>
         <div class="form-group">
-          <label>WORK EMAIL</label>
-          <input type="email" name="email" class="form-input" placeholder="alex@companysecurity.com" required />
+          <label>EMAIL</label>
+          <input type="email" name="email" class="form-input" placeholder="alex@company.com" required />
         </div>
         <div class="form-group">
-          <label>PRODUCT WEBSITE / LANDING PAGE</label>
-          <input type="text" name="website" class="form-input" placeholder="https://yourcompany.com" required />
+          <label>MESSAGE</label>
+          <textarea name="message" class="form-textarea" placeholder="Tell me a bit about the role or project you have in mind..." required></textarea>
         </div>
-        <div class="form-group">
-          <label>WHERE ARE DEALS CURRENTLY STALLING?</label>
-          <textarea name="message" class="form-textarea" placeholder="e.g. Inbound traffic is healthy, but prospects bounce quickly or sales reps struggle to disarm Palo Alto during demo calls..." required></textarea>
-        </div>
-        <button type="submit" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">Audit My Messaging</button>
+        <button type="submit" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">Send Message</button>
       </form>
     </div>
 
-    <!-- Footer -->
     <footer>
-      <div>© 2026 Dr. Manazza Batool. Enterprise Cybersecurity Messaging.</div>
+      <div>© 2026 Dr. Manazza Batool. Cybersecurity Content & Messaging Strategist.</div>
       <div style="display: flex; align-items: center; gap: 1.5rem;">
-        <!-- Email Link -->
         <a href="mailto:contact@drmanazzamessaging.com" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #F3F4F6; text-decoration: none; font-weight: 500;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect width="20" height="16" x="2" y="4" rx="2"/>
@@ -447,7 +433,6 @@
           </svg>
           <span>Email</span>
         </a>
-        <!-- LinkedIn Link -->
         <a href="https://www.linkedin.com/in/dr-manazza-batool/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #F3F4F6; text-decoration: none; font-weight: 500;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#38BDF8">
             <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/>
