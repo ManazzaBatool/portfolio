@@ -36,7 +36,7 @@
       line-height: 1.6;
       padding: 0 1.5rem;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.09) 0%, transparent 60%),
         radial-gradient(circle at 100% 100%, rgba(17, 24, 39, 0.5) 0%, transparent 50%);
       background-attachment: fixed;
     }
@@ -57,6 +57,22 @@
     .nav-link { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-link:hover { color: #FFF; }
     
+    .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: var(--card-bg);
+    }
+    .icon-btn:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+
     /* Buttons */
     .btn {
       background: var(--accent);
@@ -68,6 +84,7 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
       transition: all 0.2s ease;
       border: 1px solid var(--accent);
@@ -82,7 +99,7 @@
     .btn-secondary:hover { background: rgba(255, 255, 255, 0.03); border-color: var(--accent); box-shadow: none; }
 
     /* Hero */
-    .hero { padding: 6rem 0 4rem; }
+    .hero { padding: 5.5rem 0 4rem; }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -130,8 +147,8 @@
       gap: 1.2rem;
     }
     .trust-title { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #FFF; font-weight: 600; }
-    .trust-pills { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .trust-pill { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+    .trust-pills { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .trust-pill { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
 
     /* Section Global */
     .section-head { margin-bottom: 2.5rem; }
@@ -145,14 +162,14 @@
       border: 1px solid var(--border);
       padding: 2rem;
       border-radius: 8px;
-      transition: border-color 0.2s;
+      transition: all 0.2s ease;
     }
-    .card:hover { border-color: var(--border-light); }
+    .card:hover { border-color: var(--border-light); background: var(--card-hover); }
     .card-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); margin-bottom: 0.8rem; }
     .card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
     .card p { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
 
-    /* Value Transformation Flow */
+    /* Flow Engine */
     .flow-container {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -178,10 +195,10 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
     }
-    .teardown-header { display: flex; justify-content: space-between; margin-bottom: 1.2rem; align-items: center; }
-    .teardown-title { font-weight: 700; color: #FFF; font-size: 1.1rem; }
+    .teardown-header { display: flex; justify-content: space-between; margin-bottom: 1.2rem; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .teardown-title { font-weight: 700; color: #FFF; font-size: 1.05rem; }
     .teardown-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); background: var(--accent-dim); padding: 0.2rem 0.6rem; border-radius: 4px; }
     .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
     .comp-col { padding: 1.2rem; border-radius: 6px; }
@@ -220,22 +237,41 @@
     .qual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 5rem; }
     .qual-col { background: var(--card-bg); border: 1px solid var(--border); padding: 2rem; border-radius: 8px; }
     .qual-col h3 { font-size: 1.1rem; margin-bottom: 1rem; }
-    .qual-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--muted); }
+    .qual-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.9rem; color: var(--muted); }
     .qual-list li { display: flex; gap: 0.6rem; align-items: baseline; }
 
-    /* Footer / CTA Form Area */
-    .final-cta {
+    /* Contact Section / Form */
+    .contact-wrapper {
       background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, var(--card-bg) 100%);
       border: 1px solid var(--border-light);
       border-radius: 12px;
-      padding: 4rem 2rem;
-      text-align: center;
+      padding: 3.5rem 2rem;
       margin-bottom: 4rem;
     }
-    .final-cta h2 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; }
-    .final-cta p { color: var(--muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; }
+    .contact-header { text-align: center; max-width: 680px; margin: 0 auto 2.5rem; }
+    .contact-header h2 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.8rem; color: #FFF; }
+    .contact-header p { color: var(--muted); font-size: 1.05rem; }
+
+    .form-box { max-width: 580px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; text-align: left; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: #FFF; font-family: 'JetBrains Mono', monospace; }
+    .form-input, .form-textarea {
+      background: #0B0F19;
+      border: 1px solid var(--border);
+      color: #FFF;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+    .form-textarea { resize: vertical; min-height: 110px; }
+
+    /* Footer */
     footer { border-top: 1px solid var(--border); padding: 3rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--text); text-decoration: none; font-weight: 600; }
+    footer a { color: var(--text); text-decoration: none; font-weight: 600; transition: color 0.2s; }
     footer a:hover { color: var(--accent); }
 
     @media (max-width: 768px) {
@@ -251,14 +287,25 @@
       <a href="#" class="brand">DR. MANAZZA<span>.</span></a>
       <nav>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#work" class="nav-link">Work</a>
+        <a href="#work" class="nav-link">Work & Assets</a>
         <a href="#approach" class="nav-link">Approach</a>
         <a href="#qualification" class="nav-link">Fit</a>
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
-      <a href="mailto:contact@drmanazzamessaging.com" class="btn">Book a Teardown</a>
+      <div class="nav-actions">
+        <!-- Direct Email Icon -->
+        <a href="mailto:contact@drmanazzamessaging.com" class="icon-btn" title="Send Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <!-- LinkedIn Icon -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn Profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
+        </a>
+        <a href="#contact" class="btn" style="padding: 0.6rem 1.1rem;">Book Teardown</a>
+      </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
       <div class="badge">B2B SAAS & CYBERSECURITY POSITIONING</div>
       <h1>Translating Complex Technical Security into Enterprise Sales Pipeline.</h1>
@@ -266,13 +313,14 @@
         Helping high-growth cybersecurity & AI-driven platforms turn architectural complexity into sharp, CISO-focused positioning, sales battle cards, and high-converting web copy.
       </p>
       <div class="cta-group">
-        <a href="mailto:contact@drmanazzamessaging.com?subject=15-Min%20Messaging%20Teardown" class="btn">Book a 15-Min Messaging Teardown</a>
+        <a href="#contact" class="btn">Book a 15-Min Messaging Teardown</a>
         <a href="#work" class="btn btn-secondary">View Work Samples</a>
       </div>
     </section>
 
+    <!-- Credibility Strip -->
     <div class="trust-strip">
-      <div class="trust-title">ENGINEERED FOR COMPLEX PRODUCT SUITES</div>
+      <div class="trust-title">BUILT FOR COMPLEX ARCHITECTURES</div>
       <div class="trust-pills">
         <span class="trust-pill">• Cloud Security</span>
         <span class="trust-pill">• SIEM / SOAR / XDR</span>
@@ -282,13 +330,14 @@
       </div>
     </div>
 
+    <!-- The Problem (Buyer Friction) -->
     <div class="section-head">
       <h2>The Enterprise Sales Friction</h2>
-      <p>Your platform is technically differentiated. Your positioning should make that self-evident.</p>
+      <p>Your platform is technically differentiated. Your messaging should make that self-evident.</p>
     </div>
     <div class="grid-3">
       <div class="card">
-        <div class="card-meta">01 // THE TRANSLATION GAP</div>
+        <div class="card-meta">01 // TRANSLATION GAP</div>
         <h3>Architecture vs. Business Risk</h3>
         <p>Engineers build capabilities; CISOs buy risk mitigation. When websites emphasize kernel modules over audit defensibility, technical evaluation stalls.</p>
       </div>
@@ -304,6 +353,7 @@
       </div>
     </div>
 
+    <!-- Transformation Engine -->
     <div class="flow-container">
       <div class="section-head" style="margin-bottom: 1.5rem;">
         <h2>The Messaging Translation Engine</h2>
@@ -333,6 +383,7 @@
       </div>
     </div>
 
+    <!-- Core Services -->
     <div id="services" class="section-head">
       <h2>Strategic Deliverables</h2>
       <p>High-leverage messaging frameworks built for enterprise conversion.</p>
@@ -355,50 +406,91 @@
       </div>
     </div>
 
+    <!-- Featured Portfolio Work (6 Core Capabilities) -->
     <div id="work" class="section-head">
-      <h2>Live Teardowns & Samples</h2>
-      <p>Zero external clicks required. Direct execution of technical positioning.</p>
+      <h2>Strategic Portfolio & Live Assets</h2>
+      <p>Technical rigor translated into enterprise sales assets. Read live or review sample architecture.</p>
     </div>
 
+    <!-- Asset 01 -->
     <div class="teardown-block">
       <div class="teardown-header">
-        <div class="teardown-title">Cloud Native Runtime Security (eBPF)</div>
-        <span class="teardown-tag">HOMEPAGE TEARDOWN</span>
+        <div class="teardown-title">01 // Cloud Runtime Security (eBPF) — Homepage Architecture</div>
+        <span class="teardown-tag">MESSAGING TEARDOWN</span>
       </div>
       <div class="comparison-grid">
         <div class="comp-col comp-before">
-          <div class="comp-flag">Feature-Focused Jargon</div>
+          <div class="comp-flag">Engineering / Jargon Trap</div>
           <p class="comp-text">"Autonomous multi-vector eBPF-driven kernel telemetry for distributed hybrid cloud Kubernetes clusters and serverless containers."</p>
         </div>
         <div class="comp-col comp-after">
-          <div class="comp-flag">CISO & Operational Value</div>
-          <p class="comp-text">"Stop active container breakouts in milliseconds without deploying intrusive kernel modules or degrading production throughput."</p>
+          <div class="comp-flag">Executive & Operational Positioning</div>
+          <p class="comp-text">"Stop container breakouts in sub-second runtime without deploying intrusive kernel modules or bottlenecking production workloads."</p>
         </div>
       </div>
     </div>
 
+    <!-- Asset 02 -->
     <div class="teardown-block">
       <div class="teardown-header">
-        <div class="teardown-title">Next-Gen SIEM & Telemetry Aggregation</div>
-        <span class="teardown-tag">SALES BATTLE CARD MATRIX</span>
+        <div class="teardown-title">02 // Next-Gen SIEM & Telemetry — Enterprise Sales Battle Card</div>
+        <span class="teardown-tag">SALES ENABLEMENT</span>
       </div>
       <div class="comparison-grid">
         <div class="comp-col comp-before">
-          <div class="comp-flag">Commoditized Sales Pitch</div>
-          <p class="comp-text">"Rip-and-replace your existing legacy log manager with our faster, AI-driven correlation analytics platform."</p>
+          <div class="comp-flag">Legacy Incumbent Objection</div>
+          <p class="comp-text">"We have millions invested in Splunk indexers; rip-and-replace is an operational non-starter."</p>
         </div>
         <div class="comp-col comp-after">
-          <div class="comp-flag">Infiltration Positioning Strategy</div>
-          <p class="comp-text">"Route high-volume noisy telemetry through our pipeline to slash Splunk indexing licensing costs by 40% without disrupting SOC rules."</p>
+          <div class="comp-flag">Infiltration Wedge Narrative</div>
+          <p class="comp-text">"Position as a pre-ingestion pipeline filter that slashes Splunk licensing costs by 40% in 48 hours without changing existing SOC detection rules."</p>
         </div>
       </div>
     </div>
 
+    <!-- Asset 03 -->
+    <div class="teardown-block">
+      <div class="teardown-header">
+        <div class="teardown-title">03 // SOC Detection & Response — Cold Enterprise Outbound Sequence</div>
+        <span class="teardown-tag">PIPELINE GENERATION</span>
+      </div>
+      <div class="comparison-grid">
+        <div class="comp-col comp-before">
+          <div class="comp-flag">Standard Pitch-Slap Email</div>
+          <p class="comp-text">"Hi [First Name], our revolutionary AI-powered platform gives you single-pane-of-glass visibility. Do you have 15 minutes Tuesday for a demo?"</p>
+        </div>
+        <div class="comp-col comp-after">
+          <div class="comp-flag">Consultative Architecture Pivot</div>
+          <p class="comp-text">"Focus on Tier-1 triage alert fatigue: 'Saw you're scaling your multi-cloud footprint. Most SecOps teams we consult lose 3+ hours daily tuning false VPC flow alarms...'"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assets 04, 05, 06 Grid -->
+    <div class="grid-3" style="margin-top: 1.5rem; margin-bottom: 5rem;">
+      <div class="card">
+        <div class="card-meta">ASSET 04 // BOFU CASE STUDY</div>
+        <h3>Enterprise Case Study Blueprint</h3>
+        <p>Technical implementation documentation translated into board-level proof: Architecture bottleneck &rarr; SOC response timeline (MTTD/MTTR) &rarr; CFO audit signoff.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">ASSET 05 // PRODUCT MARKETING</div>
+        <h3>CISO Product One-Pagers</h3>
+        <p>Distilling dense 30-page architecture whitepapers into 1-page executive evaluation summaries designed for security committee purchasing approvals.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">ASSET 06 // POSITIONING MATRIX</div>
+        <h3>Differentiation Architecture</h3>
+        <p>Mapping technical features against competitor blindspots so founder-led sales teams know exactly what commercial levers to pull in late-stage deal cycles.</p>
+      </div>
+    </div>
+
+    <!-- Strategic Approach -->
     <div id="approach" class="section-head">
       <h2>Strategic Engagement Framework</h2>
       <p>Methodical execution designed to operate efficiently with technical SMEs.</p>
     </div>
-    <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+    <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 5rem;">
       <div class="card">
         <div class="card-meta">01 // DECODE</div>
         <p style="color: #FFF; font-weight: 600;">Extract Architecture</p>
@@ -426,6 +518,7 @@
       </div>
     </div>
 
+    <!-- Lead Qualification -->
     <div id="qualification" class="section-head">
       <h2>Project Fit & Lead Qualification</h2>
       <p>Focusing entirely on complex technical and enterprise motions.</p>
@@ -452,6 +545,7 @@
       </div>
     </div>
 
+    <!-- FAQ -->
     <div id="faq" class="section-head">
       <h2>Frequently Addressed Questions</h2>
     </div>
@@ -474,17 +568,46 @@
       </div>
     </details>
 
-    <div class="final-cta">
-      <h2>Ready to Sharpen Your Enterprise Positioning?</h2>
-      <p>If your platform is technically mature but your messaging isn't resonating with enterprise buyers, let's schedule an initial audit.</p>
-      <a href="mailto:contact@drmanazzamessaging.com?subject=15-Min%20Messaging%20Teardown" class="btn" style="font-size: 1rem; padding: 0.9rem 2rem;">Book a 15-Min Messaging Teardown</a>
+    <!-- Interactive Contact Section / Form -->
+    <div id="contact" class="contact-wrapper">
+      <div class="contact-header">
+        <h2>Ready to Sharpen Your Enterprise Positioning?</h2>
+        <p>Submit your product details below for a consultative 15-minute messaging teardown, or reach out directly.</p>
+      </div>
+
+      <form class="form-box" action="https://formspree.io/f/munazzabatool01@gmail.com" method="POST">
+        <div class="form-group">
+          <label>YOUR NAME</label>
+          <input type="text" name="name" class="form-input" placeholder="e.g. Alex Vance" required />
+        </div>
+        <div class="form-group">
+          <label>WORK EMAIL</label>
+          <input type="email" name="email" class="form-input" placeholder="alex@companysecurity.com" required />
+        </div>
+        <div class="form-group">
+          <label>COMPANY / PRODUCT WEBSITE</label>
+          <input type="text" name="website" class="form-input" placeholder="https://yourcompany.com" required />
+        </div>
+        <div class="form-group">
+          <label>CORE POSITIONING CHALLENGE</label>
+          <textarea name="message" class="form-textarea" placeholder="Briefly describe what your product does and where buyers usually get stuck..." required></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%; padding: 0.9rem; margin-top: 0.5rem;">Request 15-Min Teardown</button>
+      </form>
     </div>
 
+    <!-- Footer -->
     <footer>
       <div>© 2026 Dr. Manazza. Specialized B2B Cybersecurity Positioning.</div>
-      <div style="display: flex; gap: 1.5rem;">
-        <a href="mailto:contact@drmanazzamessaging.com">Email Me</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <div style="display: flex; align-items: center; gap: 1.5rem;">
+        <a href="mailto:contact@drmanazzamessaging.com" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>contact@drmanazzamessaging.com</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: var(--accent);"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
       </div>
     </footer>
   </div>
