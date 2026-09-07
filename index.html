@@ -24,7 +24,7 @@
       --danger: #F87171;
       --danger-bg: rgba(248, 113, 113, 0.08);
       --success: #34D399;
-      --success-bg: rgba(52, 211, 153, 0.08);
+      --success-bg: rgba(52, 211, 153, 0.12);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -160,6 +160,14 @@
     .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
     .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
 
+    .grid-services { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 1.3rem; 
+      margin-bottom: 5rem; 
+    }
+
+    /* Teardowns */
     .teardown-block {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -179,25 +187,27 @@
     .comp-after .comp-flag { color: var(--success); }
     .comp-text { font-size: 0.9rem; line-height: 1.5; }
 
+    /* Sample Cards */
+    .sample-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
     .sample-link {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
       color: var(--accent);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
+      transition: gap 0.2s;
     }
-    .sample-link:hover { text-decoration: underline; }
+    .sample-link:hover { gap: 0.6rem; text-decoration: underline; }
 
-    .grid-services { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-      gap: 1.3rem; 
-      margin-bottom: 5rem; 
-    }
-
+    /* Contact Section */
     .contact-box {
       background: linear-gradient(180deg, rgba(56, 189, 248, 0.08) 0%, rgba(17, 24, 39, 0.8) 100%);
       border: 1px solid var(--accent);
@@ -248,26 +258,18 @@
     .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
     .form-textarea { resize: vertical; min-height: 100px; }
 
-    #form-status {
-      display: none;
-      padding: 0.9rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-top: 0.5rem;
-      text-align: center;
+    /* Success Button States */
+    .btn-success-state {
+      background: #059669 !important;
+      border-color: #10B981 !important;
+      color: #FFFFFF !important;
+      cursor: default !important;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.3) !important;
     }
-    #form-status.success {
-      display: block;
-      background: var(--success-bg);
-      color: var(--success);
-      border: 1px solid var(--success);
-    }
-    #form-status.error {
-      display: block;
-      background: var(--danger-bg);
-      color: var(--danger);
-      border: 1px solid var(--danger);
+    .btn-error-state {
+      background: #DC2626 !important;
+      border-color: #EF4444 !important;
+      color: #FFFFFF !important;
     }
 
     footer { 
@@ -299,6 +301,7 @@
       <nav>
         <a href="#services" class="nav-link">Services</a>
         <a href="#work" class="nav-link">Work</a>
+        <a href="#samples" class="nav-link">Samples</a>
         <a href="#approach" class="nav-link">Approach</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -321,7 +324,7 @@
       </p>
       <div class="cta-group">
         <a href="#contact" class="btn">Let's Talk About Your Team's Messaging</a>
-        <a href="#work" class="btn btn-secondary">View My Work</a>
+        <a href="#samples" class="btn btn-secondary">View Sample Work</a>
       </div>
     </section>
 
@@ -433,6 +436,47 @@
       </div>
     </div>
 
+    <!-- 3 LIVE SAMPLES SECTION -->
+    <div id="samples" class="section-head" style="margin-top: 5rem;">
+      <h2>Featured Portfolio Assets</h2>
+      <p>Click below to review complete messaging assets and conversion deliverables.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Sample 1 -->
+      <div class="card sample-card">
+        <div>
+          <div class="card-meta">SAMPLE 01 // OUTBOUND</div>
+          <h3>Cold Outbound & Nurture Sequence</h3>
+          <p>High-conversion cold email sequence targeted at CISOs and SecOps leads, overcoming alert fatigue and incumbent inertia.</p>
+        </div>
+        <!-- Link replace karein (e.g. Google Drive link ya LinkedIn post link) -->
+        <a href="https://www.linkedin.com/in/dr-manazza-batool/" target="_blank" rel="noopener noreferrer" class="sample-link">View Sequence Sample &rarr;</a>
+      </div>
+
+      <!-- Sample 2 -->
+      <div class="card sample-card">
+        <div>
+          <div class="card-meta">SAMPLE 02 // SALES ENABLEMENT</div>
+          <h3>Enterprise Battle Card Matrix</h3>
+          <p>Competitive displacement battle card giving SDRs and AEs the exact wedge narrative against legacy SIEM providers.</p>
+        </div>
+        <!-- Link replace karein -->
+        <a href="#contact" class="sample-link">Request Battle Card PDF &rarr;</a>
+      </div>
+
+      <!-- Sample 3 -->
+      <div class="card sample-card">
+        <div>
+          <div class="card-meta">SAMPLE 03 // HOMEPAGE TEARDOWN</div>
+          <h3>B2B SaaS Messaging Teardown</h3>
+          <p>Comprehensive before-and-after messaging overhaul transforming an engineering-heavy value proposition into enterprise pipeline.</p>
+        </div>
+        <!-- Link replace karein -->
+        <a href="#work" class="sample-link">Read Homepage Teardown &rarr;</a>
+      </div>
+    </div>
+
     <div id="contact" class="contact-box">
       <h2>Let's Build Messaging That Converts</h2>
       <p>
@@ -457,8 +501,10 @@
           <label>MESSAGE</label>
           <textarea name="message" class="form-textarea" placeholder="Tell me a bit about the role or project you have in mind..." required></textarea>
         </div>
-        <button type="submit" id="submit-btn" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">Send Message</button>
-        <div id="form-status"></div>
+        <!-- Submit Button -->
+        <button type="submit" id="submit-btn" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
+          Send Message
+        </button>
       </form>
     </div>
 
@@ -484,15 +530,14 @@
 
   <script>
     const form = document.getElementById("contact-form");
-    const statusBox = document.getElementById("form-status");
     const submitBtn = document.getElementById("submit-btn");
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
+      
+      const originalText = submitBtn.innerText;
       submitBtn.disabled = true;
-      submitBtn.innerText = "Sending...";
-      statusBox.className = "";
-      statusBox.style.display = "none";
+      submitBtn.innerText = "Sending Message...";
 
       const data = new FormData(form);
 
@@ -506,19 +551,35 @@
         });
 
         if (response.ok) {
-          statusBox.innerText = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
-          statusBox.className = "success";
+          // Success State - turns into green button
+          submitBtn.innerText = "✓ Message Sent Successfully!";
+          submitBtn.classList.add("btn-success-state");
           form.reset();
+
+          // 5 seconds baad wapas normal button ban jayega
+          setTimeout(() => {
+            submitBtn.innerText = originalText;
+            submitBtn.classList.remove("btn-success-state");
+            submitBtn.disabled = false;
+          }, 5000);
+
         } else {
-          statusBox.innerText = "Oops! There was a problem submitting your form. Please email me directly.";
-          statusBox.className = "error";
+          submitBtn.innerText = "Error Sending. Please email directly.";
+          submitBtn.classList.add("btn-error-state");
+          setTimeout(() => {
+            submitBtn.innerText = originalText;
+            submitBtn.classList.remove("btn-error-state");
+            submitBtn.disabled = false;
+          }, 4000);
         }
       } catch (error) {
-        statusBox.innerText = "Oops! Connection error. Please email me directly.";
-        statusBox.className = "error";
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
+        submitBtn.innerText = "Network Error. Please email directly.";
+        submitBtn.classList.add("btn-error-state");
+        setTimeout(() => {
+          submitBtn.innerText = originalText;
+          submitBtn.classList.remove("btn-error-state");
+          submitBtn.disabled = false;
+        }, 4000);
       }
     });
   </script>
