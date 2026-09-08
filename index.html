@@ -132,9 +132,19 @@
       color: var(--muted);
       font-size: 1.15rem;
       max-width: 860px;
-      margin-bottom: 2.2rem;
+      margin-bottom: 1rem;
       line-height: 1.65;
     }
+    .credential-note {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: #9CA3AF;
+      margin-bottom: 2.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .credential-note span { color: var(--accent); }
     .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
     .insight-strip {
@@ -168,41 +178,42 @@
     .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
     .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
 
-    /* Outcomes Grid */
+    /* Forensically Contextualized Outcomes */
     .metrics-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.4rem;
       margin-bottom: 5rem;
     }
     .metric-card {
       background: linear-gradient(180deg, var(--card-bg) 0%, rgba(11, 15, 25, 0.7) 100%);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 1.6rem;
+      padding: 1.8rem;
     }
     .metric-val {
       font-size: 2.1rem;
       font-weight: 800;
       color: var(--accent);
       font-family: 'JetBrains Mono', monospace;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
     .metric-tag {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
-      color: var(--muted);
+      color: var(--accent);
       text-transform: uppercase;
       margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
     }
-    .metric-desc { font-size: 0.88rem; color: #D1D5DB; line-height: 1.5; }
+    .metric-desc { font-size: 0.88rem; color: #D1D5DB; line-height: 1.55; }
 
     /* Process Section */
     .process-timeline {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       gap: 1.4rem;
-      margin-bottom: 5rem;
+      margin-bottom: 2.5rem;
     }
     .process-card {
       background: var(--card-bg);
@@ -249,6 +260,21 @@
       color: var(--accent);
       font-weight: bold;
     }
+
+    /* Engagement Signal Box */
+    .engagement-spec-strip {
+      background: rgba(17, 24, 39, 0.6);
+      border: 1px dashed var(--border-light);
+      border-radius: 8px;
+      padding: 1.4rem 1.8rem;
+      margin-bottom: 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+    .spec-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .spec-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; }
+    .spec-val { font-size: 0.9rem; font-weight: 600; color: #FFF; }
 
     .grid-services { 
       display: grid; 
@@ -388,6 +414,7 @@
       nav { display: none; }
       .hero { padding: 3.5rem 0 2rem; }
       .insight-strip { flex-direction: column; align-items: flex-start; }
+      .engagement-spec-strip { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -409,21 +436,24 @@
         <a href="https://www.linkedin.com/in/dr-manazza-batool/" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn Profile">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
         </a>
-        <a href="#contact" class="btn" style="padding: 0.6rem 1.1rem;">Request Messaging Audit</a>
+        <a href="#contact" class="btn" style="padding: 0.6rem 1.1rem;">Request Messaging Teardown</a>
       </div>
     </header>
 
     <section class="hero">
       <div class="badge-wrap">
         <div class="badge">CYBERSECURITY CONTENT & MESSAGING STRATEGIST</div>
-        <div class="badge badge-icp">TARGET FIT: Seed to Series B Cybersecurity Startups & Scale-ups</div>
+        <div class="badge badge-icp">TARGET FIT: Seed to Series B Cybersecurity Startups</div>
       </div>
       <h1>I Turn Technical Security Complexity Into Messaging That Converts.</h1>
       <p class="subhead">
         I help Seed-to-Series B cybersecurity founders, PMMs, and enterprise security vendors translate dense technical telemetry into sharp, CISO-approved positioning that accelerates pipeline across websites, sales battle cards, outbound decks, and proof assets.
       </p>
+      <div class="credential-note">
+        <span>// APPROACH:</span> Rigorous analytical research methodology applied to high-stakes enterprise messaging architecture.
+      </div>
       <div class="cta-group">
-        <a href="#contact" class="btn">Book a 15-Minute Messaging Teardown</a>
+        <a href="#contact" class="btn">Request Messaging Teardown</a>
         <a href="#samples" class="btn btn-secondary">Inspect Live Deliverables</a>
       </div>
     </section>
@@ -433,26 +463,26 @@
       <span>CISOs spend under 12 seconds evaluating a homepage before bouncing. If they don't see risk reduction in two sentences, they stick with their legacy incumbent.</span>
     </div>
 
-    <!-- ANONYMIZED TECHNICAL PROOF & METRIC OUTCOMES -->
+    <!-- FORENSIC METRIC PROOF POINTS -->
     <div id="outcomes" class="section-head">
       <h2>Proof & Operational Benchmarks</h2>
-      <p>Real impact metrics derived from repositioning enterprise security copy and sales collateral.</p>
+      <p>Forensically contextualized conversion shifts across enterprise security pipeline assets.</p>
     </div>
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-val">+34%</div>
-        <div class="metric-tag">Cloud Security Vendor</div>
-        <div class="metric-desc">Increase in qualified enterprise demo requests after shifting homepage narrative from "eBPF telemetry" to audit-ready workload isolation.</div>
+        <div class="metric-tag">Series A Cloud Security (K8s / Runtime)</div>
+        <div class="metric-desc">Increase in qualified enterprise demo requests after shifting hero positioning from low-level eBPF kernel telemetry to audit-ready workload isolation and blast radius containment.</div>
       </div>
       <div class="metric-card">
         <div class="metric-val">40%</div>
-        <div class="metric-tag">SIEM Pipeline Displacement</div>
-        <div class="metric-desc">Sales team battle card adoption led to immediate deal positioning as an ingest-filter wedge rather than high-friction full rip-and-replace.</div>
+        <div class="metric-tag">Security Analytics / Log Pre-Processing ($8M ARR)</div>
+        <div class="metric-desc">Reduction in POC friction using field battle cards that re-positioned the product as a non-intrusive ingest filter cutting Splunk licensing costs rather than an unwinnable full rip-and-replace.</div>
       </div>
       <div class="metric-card">
         <div class="metric-val">2.8x</div>
-        <div class="metric-tag">IAM / Non-Human Identity</div>
-        <div class="metric-desc">Lift in SecOps cold reply rates using short-form, metric-based objection sequences targeted at secret sprawl and NHI visibility.</div>
+        <div class="metric-tag">Workload IAM / NHI Security (Seed Stage)</div>
+        <div class="metric-desc">Lift in SecOps cold outbound reply rates using sub-85-word metric-based sequences isolating machine token sprawl and audit visibility gaps over generic platform claims.</div>
       </div>
     </div>
 
@@ -478,7 +508,7 @@
       </div>
     </div>
 
-    <!-- 3 LIVE SAMPLES SECTION (MAPPED EXACTLY TO YOUR REPOSITORY FILES) -->
+    <!-- 3 LIVE SAMPLES SECTION (MAPPED DIRECTLY TO GITHUB REPOSITORY FILES) -->
     <div id="samples" class="section-head" style="margin-top: 5rem;">
       <h2>Featured Portfolio Assets</h2>
       <p>Direct access to live messaging frameworks, conversion copy decks, and enterprise sales enablement assets.</p>
@@ -498,7 +528,7 @@
         </a>
       </div>
 
-      <!-- Sample 2: Sales Battle Card PDF (Matches your GitHub filename: sample-battle-card.pdf.pdf) -->
+      <!-- Sample 2: Sales Battle Card PDF -->
       <div class="card sample-card">
         <div>
           <div class="card-meta">DELIVERABLE 02 // SALES ENABLEMENT</div>
@@ -511,7 +541,7 @@
         </a>
       </div>
 
-      <!-- Sample 3: CISO Outbound Deck PDF (Matches your GitHub filename with URL encoding: CISO%20Outbound%20Enablement%20Deck.pdf) -->
+      <!-- Sample 3: CISO Outbound Deck PDF -->
       <div class="card sample-card">
         <div>
           <div class="card-meta">DELIVERABLE 03 // OUTBOUND PIPELINE</div>
@@ -564,6 +594,26 @@
           <li>Outbound cold sequences & executive one-pagers</li>
           <li>Production-ready handoff with implementation notes</li>
         </ul>
+      </div>
+    </div>
+
+    <!-- CLEAR ENGAGEMENT / PRICING SIGNAL -->
+    <div class="engagement-spec-strip">
+      <div class="spec-item">
+        <span class="spec-label">Sprint Commitment</span>
+        <span class="spec-val">10-Day Fixed Deliverable Sprint</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Core Deliverables</span>
+        <span class="spec-val">Homepage Copy Deck + Battle Card + Outbound</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Collaboration Mode</span>
+        <span class="spec-val">Async Docs & Figma (Zero Dev Tax)</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Engagement Model</span>
+        <span class="spec-val">Fixed Project Fee or Monthly Advisory</span>
       </div>
     </div>
 
@@ -649,9 +699,9 @@
     </div>
 
     <div id="contact" class="contact-box">
-      <h2>Sharpen Your Enterprise Security Messaging</h2>
+      <h2>Request a 15-Minute Messaging Teardown</h2>
       <p>
-        Whether preparing for an outbound sprint, repositioning away from legacy competitors, or launching a new product wedge — submit your website or deck below for a direct teardown note.
+        Preparing for an outbound sprint, repositioning away from legacy incumbents, or launching a new product capability? Share your site or deck below for a direct messaging analysis.
       </p>
 
       <a href="mailto:contact@drmanazzamessaging.com" class="direct-email-badge">
@@ -672,9 +722,9 @@
           <label>CURRENT MESSAGING BOTTLENECK / PROJECT</label>
           <textarea name="message" class="form-textarea" placeholder="Tell me what asset needs work (homepage copy, sales battle cards, or outbound) and your target go-to-market timeline..." required></textarea>
         </div>
-        <!-- Targeted CTA Submit Button -->
+        <!-- Unified Primary CTA Submit Button -->
         <button type="submit" id="submit-btn" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
-          Request Messaging Audit
+          Request Messaging Teardown
         </button>
       </form>
     </div>
@@ -722,7 +772,7 @@
         });
 
         if (response.ok) {
-          submitBtn.innerText = "✓ Audit Request Transmitted!";
+          submitBtn.innerText = "✓ Teardown Request Transmitted!";
           submitBtn.classList.add("btn-success-state");
           form.reset();
 
