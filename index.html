@@ -178,36 +178,6 @@
     .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
     .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
 
-    /* Forensically Contextualized Outcomes */
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.4rem;
-      margin-bottom: 5rem;
-    }
-    .metric-card {
-      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(11, 15, 25, 0.7) 100%);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.8rem;
-    }
-    .metric-val {
-      font-size: 2.1rem;
-      font-weight: 800;
-      color: var(--accent);
-      font-family: 'JetBrains Mono', monospace;
-      margin-bottom: 0.2rem;
-    }
-    .metric-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.02em;
-    }
-    .metric-desc { font-size: 0.88rem; color: #D1D5DB; line-height: 1.55; }
-
     /* Process Section */
     .process-timeline {
       display: grid;
@@ -423,9 +393,9 @@
     <header>
       <a href="#" class="brand">DR. MANAZZA BATOOL<span>.</span></a>
       <nav>
-        <a href="#outcomes" class="nav-link">Proof</a>
+        <a href="#work" class="nav-link">Teardowns</a>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#samples" class="nav-link">Samples</a>
+        <a href="#samples" class="nav-link">Deliverables</a>
         <a href="#process" class="nav-link">Process</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -463,29 +433,6 @@
       <span>CISOs spend under 12 seconds evaluating a homepage before bouncing. If they don't see risk reduction in two sentences, they stick with their legacy incumbent.</span>
     </div>
 
-    <!-- FORENSIC METRIC PROOF POINTS -->
-    <div id="outcomes" class="section-head">
-      <h2>Proof & Operational Benchmarks</h2>
-      <p>Forensically contextualized conversion shifts across enterprise security pipeline assets.</p>
-    </div>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-val">+34%</div>
-        <div class="metric-tag">Series A Cloud Security (K8s / Runtime)</div>
-        <div class="metric-desc">Increase in qualified enterprise demo requests after shifting hero positioning from low-level eBPF kernel telemetry to audit-ready workload isolation and blast radius containment.</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-val">40%</div>
-        <div class="metric-tag">Security Analytics / Log Pre-Processing ($8M ARR)</div>
-        <div class="metric-desc">Reduction in POC friction using field battle cards that re-positioned the product as a non-intrusive ingest filter cutting Splunk licensing costs rather than an unwinnable full rip-and-replace.</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-val">2.8x</div>
-        <div class="metric-tag">Workload IAM / NHI Security (Seed Stage)</div>
-        <div class="metric-desc">Lift in SecOps cold outbound reply rates using sub-85-word metric-based sequences isolating machine token sprawl and audit visibility gaps over generic platform claims.</div>
-      </div>
-    </div>
-
     <div id="approach" class="section-head">
       <h2>Where Enterprise Deals Slip Through Messaging</h2>
       <p>Three friction points I diagnose and resolve in cybersecurity sales and marketing copy.</p>
@@ -508,7 +455,7 @@
       </div>
     </div>
 
-    <!-- 3 LIVE SAMPLES SECTION (MAPPED DIRECTLY TO GITHUB REPOSITORY FILES) -->
+    <!-- 3 LIVE SAMPLES SECTION (MAPPED EXACTLY TO GITHUB REPO FILES) -->
     <div id="samples" class="section-head" style="margin-top: 5rem;">
       <h2>Featured Portfolio Assets</h2>
       <p>Direct access to live messaging frameworks, conversion copy decks, and enterprise sales enablement assets.</p>
@@ -722,7 +669,6 @@
           <label>CURRENT MESSAGING BOTTLENECK / PROJECT</label>
           <textarea name="message" class="form-textarea" placeholder="Tell me what asset needs work (homepage copy, sales battle cards, or outbound) and your target go-to-market timeline..." required></textarea>
         </div>
-        <!-- Unified Primary CTA Submit Button -->
         <button type="submit" id="submit-btn" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
           Request Messaging Teardown
         </button>
