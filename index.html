@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Manazza Batool | Cybersecurity Content & Messaging Strategist</title>
-  <meta name="description" content="Cybersecurity content and messaging strategist for Seed-to-Series B security startups and growth-stage vendors. Positioning, sales battle cards, CISO outbound decks, and case studies." />
+  <title>Dr. Manazza Batool | Enterprise Cybersecurity Messaging & Displacement Architecture</title>
+  <meta name="description" content="Competitive displacement assets, field kits, and positioning sprints for enterprise cybersecurity vendors competing against Microsoft, CrowdStrike, and CyberArk bundling." />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,6 @@
       --border-light: #374151;
       --accent: #38BDF8;
       --accent-dim: rgba(56, 189, 248, 0.1);
-      --accent-glow: rgba(56, 189, 248, 0.22);
       --text: #F3F4F6;
       --muted: #9CA3AF;
       --danger: #F87171;
@@ -37,12 +36,12 @@
       line-height: 1.6;
       padding: 0 1.5rem;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.1) 0%, transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(17, 24, 39, 0.6) 0%, transparent 50%);
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.09) 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(17, 24, 39, 0.5) 0%, transparent 50%);
       background-attachment: fixed;
     }
 
-    .container { max-width: 1060px; margin: 0 auto; }
+    .container { max-width: 1040px; margin: 0 auto; }
     
     header {
       display: flex;
@@ -76,7 +75,7 @@
     .btn {
       background: var(--accent);
       color: #040814;
-      padding: 0.8rem 1.45rem;
+      padding: 0.75rem 1.4rem;
       border-radius: 6px;
       font-weight: 700;
       font-size: 0.9rem;
@@ -89,13 +88,13 @@
       border: 1px solid var(--accent);
       cursor: pointer;
     }
-    .btn:hover { background: #7DD3FC; transform: translateY(-1px); box-shadow: 0 0 20px rgba(56, 189, 248, 0.35); }
+    .btn:hover { background: #7DD3FC; transform: translateY(-1px); box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
     .btn-secondary {
       background: transparent;
       color: #FFF;
       border: 1px solid var(--border-light);
     }
-    .btn-secondary:hover { background: rgba(255, 255, 255, 0.04); border-color: var(--accent); box-shadow: none; }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.03); border-color: var(--accent); box-shadow: none; }
 
     .hero { padding: 4.8rem 0 3.5rem; }
     .badge-wrap { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
@@ -135,18 +134,7 @@
       margin-bottom: 1rem;
       line-height: 1.65;
     }
-    .credential-note {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
-      color: #9CA3AF;
-      margin-bottom: 2.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .credential-note span { color: var(--accent); }
-    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
 
     .insight-strip {
       margin: 2.5rem 0 4.5rem;
@@ -179,19 +167,66 @@
     .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFF; }
     .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
 
+    /* Tier Models */
+    .tier-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .tier-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      width: fit-content;
+    }
+    .tier-timing {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #FCD34D;
+      margin-bottom: 1rem;
+    }
+    .tier-card ul {
+      list-style-type: none;
+      margin: 1.2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .tier-card li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .tier-card li::before {
+      content: "▹";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
     /* Process Section */
     .process-timeline {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       gap: 1.4rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 5rem;
     }
     .process-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       padding: 1.8rem;
       border-radius: 8px;
-      position: relative;
     }
     .process-step {
       font-family: 'JetBrains Mono', monospace;
@@ -211,47 +246,6 @@
       display: inline-block;
       margin-bottom: 0.8rem;
       margin-left: 0.5rem;
-    }
-    .process-card ul {
-      margin-top: 0.9rem;
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .process-card li {
-      font-size: 0.85rem;
-      color: var(--muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    .process-card li::before {
-      content: "▹";
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    /* Engagement Signal Box */
-    .engagement-spec-strip {
-      background: rgba(17, 24, 39, 0.6);
-      border: 1px dashed var(--border-light);
-      border-radius: 8px;
-      padding: 1.4rem 1.8rem;
-      margin-bottom: 5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-    }
-    .spec-item { display: flex; flex-direction: column; gap: 0.2rem; }
-    .spec-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; }
-    .spec-val { font-size: 0.9rem; font-weight: 600; color: #FFF; }
-
-    .grid-services { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-      gap: 1.3rem; 
-      margin-bottom: 5rem; 
     }
 
     /* Teardowns */
@@ -280,13 +274,6 @@
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-    }
-    .sample-subtag {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #FFF;
-      margin-top: -0.3rem;
-      margin-bottom: 0.6rem;
     }
     .sample-link {
       display: inline-flex;
@@ -352,7 +339,6 @@
     .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
     .form-textarea { resize: vertical; min-height: 100px; }
 
-    /* Success Button States */
     .btn-success-state {
       background: #059669 !important;
       border-color: #10B981 !important;
@@ -385,7 +371,6 @@
       nav { display: none; }
       .hero { padding: 3.5rem 0 2rem; }
       .insight-strip { flex-direction: column; align-items: flex-start; }
-      .engagement-spec-strip { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -394,10 +379,10 @@
     <header>
       <a href="#" class="brand">DR. MANAZZA BATOOL<span>.</span></a>
       <nav>
-        <a href="#work" class="nav-link">Teardowns</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#samples" class="nav-link">Deliverables</a>
+        <a href="#services" class="nav-link">Engagement Tiers</a>
+        <a href="#samples" class="nav-link">Live Assets</a>
         <a href="#process" class="nav-link">Process</a>
+        <a href="#work" class="nav-link">Teardowns</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -407,66 +392,125 @@
         <a href="https://www.linkedin.com/in/dr-manazza-batool/" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn Profile">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
         </a>
-        <a href="#contact" class="btn" style="padding: 0.6rem 1.1rem;">Request Messaging Teardown</a>
+        <a href="#contact" class="btn" style="padding: 0.6rem 1.1rem;">Scope a Displacement Wedge</a>
       </div>
     </header>
 
     <section class="hero">
       <div class="badge-wrap">
-        <div class="badge">CYBERSECURITY CONTENT & MESSAGING STRATEGIST</div>
-        <div class="badge badge-icp">TARGET FIT: Seed to Series B Cybersecurity Startups</div>
+        <div class="badge">B2B CYBERSECURITY MESSAGING STRATEGIST</div>
+        <div class="badge badge-icp">TARGET FIT: Enterprise Security Startups & Vendors</div>
       </div>
-      <h1>I Turn Technical Security Complexity Into Messaging That Converts.</h1>
+      <h1>"We already get that bundled."<br/>Your reps need a better answer than a feature matrix.</h1>
       <p class="subhead">
-        I help Seed-to-Series B cybersecurity founders, PMMs, and enterprise security vendors translate dense technical telemetry into sharp, CISO-approved positioning that accelerates pipeline across websites, sales battle cards, outbound decks, and proof assets.
+        I engineer competitive displacement assets for enterprise security vendors: one-page battle cards, field kits, and positioning sprints that give account executives the exact commercial language to neutralize Microsoft E5, CrowdStrike, and CyberArk bundling objections. Built directly from your sales call recordings, not generic briefs.
       </p>
-      <div class="credential-note">
-        <span>// THE PEDIGREE:</span> PhD-trained in complex systems communication — translating dense security architecture into positioning enterprise buyers act on.
-      </div>
       <div class="cta-group">
-        <a href="#contact" class="btn">Request Messaging Teardown</a>
+        <a href="#contact" class="btn">Name the Vendor You Keep Losing To</a>
         <a href="#samples" class="btn btn-secondary">Inspect Live Deliverables</a>
       </div>
     </section>
 
     <div class="insight-strip">
-      <strong>WHY THIS MATTERS:</strong>
-      <span>CISOs spend under 12 seconds evaluating a homepage before bouncing. If they don't see risk reduction in two sentences, they stick with their legacy incumbent.</span>
+      <strong>THE COMMERCIAL WEDGE:</strong>
+      <span>Feature bake-offs validate the incumbent's catalog. Deals are won by exposing the downstream operational exposure the incumbent cannot cover, surfacing it before pricing enters the room.</span>
     </div>
 
     <div id="approach" class="section-head">
-      <h2>Where Enterprise Deals Slip Through Messaging</h2>
-      <p>Three friction points I diagnose and resolve in cybersecurity sales and marketing copy.</p>
+      <h2>Where Enterprise Security Deals Stall</h2>
+      <p>Three commercial friction points diagnosed and resolved across enterprise sales pipelines.</p>
     </div>
     <div class="grid-3">
       <div class="card">
         <div class="card-meta">FRICTION POINT 01</div>
-        <h3>The "Engineering Dump" Trap</h3>
-        <p>Brilliant low-level telemetry described as "multi-tenant eBPF distributed engine" loses CISOs fast. They don't buy code; they buy lower risk, board-level compliance, and fewer midnight incident calls.</p>
+        <h3>The Bundled Contract Default</h3>
+        <p>The CISO likes the product, then procurement points to an existing Microsoft or CrowdStrike agreement covering 70% of the checklist at zero marginal cost. Pushing feature matrices validates the comparison you cannot win on depth.</p>
       </div>
       <div class="card">
         <div class="card-meta">FRICTION POINT 02</div>
-        <h3>The Unwinnable Demo Call</h3>
-        <p>When copy fails to pre-educate buyers on architecture, AEs spend the first 20 minutes explaining baseline vocabulary instead of driving discovery and setting proof-of-concept timelines.</p>
+        <h3>The Claim That Invites a Rebuttal</h3>
+        <p>Reps claim exclusivity on broad capabilities. The incumbent forwards a public data sheet showing they also cover it, freezing the deal. Displacement cards identify which claims hold up and which hand the competitor an easy counter.</p>
       </div>
       <div class="card">
         <div class="card-meta">FRICTION POINT 03</div>
-        <h3>The Commodity Vacuum</h3>
-        <p>"AI-powered, unified, proactive security" sounds identical to 200 other vendors. Without sharp operational contrast, risk-averse buyers default to familiar legacy incumbents.</p>
+        <h3>The Dual-Buyer Collapse</h3>
+        <p>The CISO buys risk containment, but Platform Engineering vetoes over deployment friction or pipeline latency. Without a narrative that reconciles both stakeholders in one message, internal champions go silent.</p>
       </div>
     </div>
 
-    <!-- 3 LIVE SAMPLES SECTION (MAPPED TO YOUR REPO ASSETS) -->
+    <!-- STRATEGIC ENGAGEMENT MODELS -->
+    <div id="services" class="section-head">
+      <h2>Strategic Engagement Models</h2>
+      <p>Fixed-scope, high-conviction deliverables designed for enterprise cybersecurity revenue teams.</p>
+    </div>
+    <div class="grid-3">
+      
+      <!-- Tier 1 -->
+      <div class="tier-card">
+        <div>
+          <span class="tier-badge">TIER 01 // TACTICAL WEDGE</span>
+          <h3>The Displacement Card</h3>
+          <div class="tier-timing">5 Business Days Turnaround</div>
+          <p style="color: var(--muted); font-size: 0.9rem;">One competitor. One page. The tactical field asset that gives your AE a defensible answer before the next competitive bake-off.</p>
+          <ul>
+            <li>Single-competitor displacement card, front and back</li>
+            <li>Documented incumbent concessions to protect rep credibility</li>
+            <li>Operational exposure mapped against competitor documentation</li>
+            <li>3 to 5 verbatim discovery and rebuttal scripts for live calls</li>
+            <li>Strategic rationale memo detailing positioning choices</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%;">Inquire About Displacement Cards</a>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="tier-card" style="border-color: var(--accent); background: linear-gradient(180deg, rgba(56, 189, 248, 0.05) 0%, var(--card-bg) 100%);">
+        <div>
+          <span class="tier-badge">TIER 02 // SALES ENABLEMENT</span>
+          <h3>Competitive Field Kit</h3>
+          <div class="tier-timing">10 Business Days Turnaround</div>
+          <p style="color: var(--muted); font-size: 0.9rem;">Three competitors, an outbound sequence, and an executive one-pager. The complete field stack for a sales team heading into a contested quarter.</p>
+          <ul>
+            <li>Everything in Tier 1 across three named competitors</li>
+            <li>4-touch displacement outbound sequence targeting operational gaps</li>
+            <li>Executive one-pager for champions to defend budget in committee</li>
+            <li>45-minute deployment briefing with sales leadership</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn" style="margin-top: 1.5rem; width: 100%;">Inquire About Field Kits</a>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="tier-card">
+        <div>
+          <span class="tier-badge">TIER 03 // FULL GTM SPRINT</span>
+          <h3>Enterprise Positioning Sprint</h3>
+          <div class="tier-timing">2 to 3 Weeks Turnaround</div>
+          <p style="color: var(--muted); font-size: 0.9rem;">For security founders whose homepage narrative and sales deck fail to reflect their architectural moat, leading to incumbent categorization.</p>
+          <ul>
+            <li>Everything in Tier 2, plus complete positioning diagnostic</li>
+            <li>Wireframed homepage copy deck for the dual buyer (CISO + Platform)</li>
+            <li>Defensible category wedge statement the entire team can execute</li>
+            <li>Messaging guardrails document: approved terminology and banned claims</li>
+            <li>Two collaborative strategy sessions with founder and PMM leadership</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%;">Scope a Positioning Sprint</a>
+      </div>
+
+    </div>
+
+    <!-- LIVE DELIVERABLES SECTION -->
     <div id="samples" class="section-head" style="margin-top: 5rem;">
       <h2>Featured Portfolio Assets</h2>
-      <p>Direct access to live messaging frameworks, conversion copy decks, and enterprise sales enablement assets.</p>
+      <p>Direct access to live messaging frameworks, sales battle cards, and dual-buyer copy decks.</p>
     </div>
 
     <div class="grid-3">
       <!-- Sample 1: Homepage Copy Deck PDF -->
       <div class="card sample-card">
         <div>
-          <div class="card-meta">DELIVERABLE 01 // CORE POSITIONING</div>
+          <div class="card-meta">DELIVERABLE 01 // POSITIONING DECK</div>
           <h3>Cloud Security Homepage Copy Deck</h3>
           <p>Dual-buyer conversion architecture balancing executive CISO risk mitigation with low-level platform engineering proof points.</p>
         </div>
@@ -479,9 +523,9 @@
       <!-- Sample 2: Sales Battle Card PDF -->
       <div class="card sample-card">
         <div>
-          <div class="card-meta">DELIVERABLE 02 // SALES ENABLEMENT</div>
-          <h3>Enterprise Battle Card Matrix</h3>
-          <p>Competitive displacement framework equipping sales teams to neutralize incumbent objections and shift focus to SLA accountability.</p>
+          <div class="card-meta">DELIVERABLE 02 // FIELD ENABLEMENT</div>
+          <h3>Enterprise Displacement Battle Card</h3>
+          <p>Competitive displacement framework equipping sales teams to neutralize Microsoft and Okta bundling by isolating help-desk account recovery exposure.</p>
         </div>
         <a href="sample-battle-card.pdf.pdf" target="_blank" rel="noopener noreferrer" class="sample-link">
           Open Battle Card PDF 
@@ -494,8 +538,7 @@
         <div>
           <div class="card-meta">DELIVERABLE 03 // OUTBOUND PIPELINE</div>
           <h3>4-Touch CISO Acquisition Sequence</h3>
-          <div class="sample-subtag">NHI & Workload IAM</div>
-          <p>A complete outbound enablement asset built for enterprise security buyers — machine identity imbalance, vault coverage gaps, token remediation delta, and a professional breakup — all in under 85 words per email. Includes full strategic rationale and psychological mechanism breakdown for each touch.</p>
+          <p>Outbound enablement asset targeting Non-Human Identity (NHI) sprawl, vault coverage gaps, and token remediation deltas under 85 words per touch.</p>
         </div>
         <a href="CISO%20Outbound%20Enablement%20Deck.pdf" target="_blank" rel="noopener noreferrer" class="sample-link">
           Open Outbound Enablement PDF 
@@ -504,152 +547,77 @@
       </div>
     </div>
 
-    <!-- SPRINT PROCESS & TIMELINES -->
+    <!-- PROCESS SECTION -->
     <div id="process" class="section-head">
-      <h2>How An Engagement Works</h2>
-      <p>Lean, fast-turnaround messaging sprints designed to integrate directly with product, PMM, and founder workflows.</p>
+      <h2>How an Engagement Works</h2>
+      <p>Lean, fast-turnaround messaging sprints designed to integrate directly with sales leadership and PMM workflows.</p>
     </div>
     <div class="process-timeline">
       <div class="process-card">
-        <span class="process-step">PHASE 01: ARCHITECTURE INGESTION</span>
-        <span class="process-timing">DAYS 1–3</span>
-        <h3>Technical Discovery</h3>
-        <p>I extract your technical edge directly from docs, product demos, or sales call transcripts without burdening your dev team.</p>
-        <ul>
-          <li>Review architecture diagrams & competitive docs</li>
-          <li>Isolate technical differentiator vs. commodity noise</li>
-          <li>Identify friction points in current sales pipeline</li>
-        </ul>
+        <span class="process-step">PHASE 01: DIAGNOSTIC INTAKE</span>
+        <span class="process-timing">DAYS 1–2</span>
+        <h3>Architecture & Call Review</h3>
+        <p style="color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem;">I evaluate your architecture documentation, recorded competitive calls, and pitch materials. 45 minutes with an AE is enough. No developer tax or lengthy questionnaire required.</p>
       </div>
       <div class="process-card">
-        <span class="process-step">PHASE 02: POSITIONING & WIREFRAMES</span>
-        <span class="process-timing">DAYS 4–7</span>
-        <h3>Narrative Architecture</h3>
-        <p>Drafting conversion copy built to satisfy both the executive budget defender (CISO) and the technical evaluator.</p>
-        <ul>
-          <li>Wireframed homepage copy with section-by-section rationale</li>
-          <li>Buyer defense positioning (risk reduction vs. technical proof)</li>
-          <li>One collaborative revision loop via Figma or Google Docs</li>
-        </ul>
+        <span class="process-step">PHASE 02: DRAFTING & RATIONALE</span>
+        <span class="process-timing">DAYS 3–5</span>
+        <h3>Field Asset Engineering</h3>
+        <p style="color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem;">Delivery of production-ready drafts accompanied by strategic rationale memos detailing why each line is framed to withstand the competitor's documented pushback.</p>
       </div>
       <div class="process-card">
-        <span class="process-step">PHASE 03: SALES ASSET HARDENING</span>
-        <span class="process-timing">DAYS 8–10</span>
-        <h3>Field Asset Finalization</h3>
-        <p>Translating positioning into ready-to-deploy assets for sales reps, SDRs, and demand generation campaigns.</p>
-        <ul>
-          <li>Sales battle cards with verbatim objection handling</li>
-          <li>Outbound cold sequences & executive one-pagers</li>
-          <li>Production-ready handoff with implementation notes</li>
-        </ul>
+        <span class="process-step">PHASE 03: FIELD VALIDATION</span>
+        <span class="process-timing">DAYS 6–10</span>
+        <h3>Handoff & Sales Deployment</h3>
+        <p style="color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem;">One consolidated feedback loop based on live AE testing. Delivery in production formats and editable files with complete ownership and zero agency lock-in.</p>
       </div>
     </div>
 
-    <!-- CLEAR ENGAGEMENT & PRICING SIGNAL -->
-    <div class="engagement-spec-strip">
-      <div class="spec-item">
-        <span class="spec-label">Sprint Commitment</span>
-        <span class="spec-val">10-Day Fixed Deliverable Sprint</span>
-      </div>
-      <div class="spec-item">
-        <span class="spec-label">Core Deliverables</span>
-        <span class="spec-val">Homepage Copy Deck + Battle Card + Outbound</span>
-      </div>
-      <div class="spec-item">
-        <span class="spec-label">Collaboration Mode</span>
-        <span class="spec-val">Async Docs & Figma (Zero Dev Tax)</span>
-      </div>
-      <div class="spec-item">
-        <span class="spec-label">Engagement Model</span>
-        <span class="spec-val">Fixed Sprint (from $4,500) or Monthly Advisory</span>
-      </div>
-    </div>
-
-    <div id="services" class="section-head">
-      <h2>What I Do</h2>
-      <p>Seven core deliverables built specifically for cybersecurity sales and marketing teams.</p>
-    </div>
-    <div class="grid-services">
-      <div class="card">
-        <div class="card-meta">01 // CORE POSITIONING</div>
-        <h3>Webpage & Funnel Copy</h3>
-        <p>Homepage and landing page copy structured to convert technical evaluators into high-intent inbound demos.</p>
-      </div>
-      <div class="card">
-        <div class="card-meta">02 // BUYER DEFENSE</div>
-        <h3>White Papers</h3>
-        <p>Dense technical documentation distilled into authoritative assets that help internal champions defend budget in committee meetings.</p>
-      </div>
-      <div class="card">
-        <div class="card-meta">03 // PROOF ASSETS</div>
-        <h3>Case Studies</h3>
-        <p>Architectural constraint &rarr; deployment timeline &rarr; measurable outcome. Real proof, no fluffy testimonials.</p>
-      </div>
-      <div class="card">
-        <div class="card-meta">04 // FIELD ENABLEMENT</div>
-        <h3>Sales Battle Cards</h3>
-        <p>Competitor displacement matrices that give sales reps the exact scripts to handle incumbent objections.</p>
-      </div>
-      <div class="card">
-        <div class="card-meta">05 // PROCUREMENT ASSETS</div>
-        <h3>One-Pagers</h3>
-        <p>Executive evaluation summaries built for security committee sign-off, without friction.</p>
-      </div>
-      <div class="card">
-        <div class="card-meta">06 // OUTBOUND</div>
-        <h3>Email Sequencing</h3>
-        <p>Cold outbound and nurture sequences that speak to real operational headaches, not spammy pitch templates.</p>
-      </div>
-      <div class="card" style="grid-column: 1 / -1;">
-        <div class="card-meta">07 // CAPITAL & EXPANSION</div>
-        <h3>Pitch Decks</h3>
-        <p>Investor and enterprise decks that translate technical depth into a compelling growth or funding narrative.</p>
-      </div>
-    </div>
-
+    <!-- TEARDOWNS -->
     <div id="work" class="section-head">
-      <h2>Messaging Teardowns: Before vs. After</h2>
-      <p>Real examples of translating technical architecture into enterprise wedge positioning.</p>
+      <h2>Messaging Teardowns: Observed Failure vs. Wedge Positioning</h2>
+      <p>Real-world examples of translating defensive feature comparisons into offensive operational wedges.</p>
     </div>
 
     <div class="teardown-block">
       <div class="teardown-header">
-        <div class="teardown-title">Webpage Copy // Runtime Container Security</div>
-        <span class="teardown-tag">HOMEPAGE POSITIONING</span>
+        <div class="teardown-title">Identity & Access Management // Account Recovery</div>
+        <span class="teardown-tag">DISPLACEMENT BATTLE CARD</span>
       </div>
       <div class="comparison-grid">
         <div class="comp-col comp-before">
-          <div class="comp-flag">Before (Feature Dump)</div>
-          <p class="comp-text">"Autonomous multi-vector eBPF-driven kernel telemetry for distributed hybrid cloud Kubernetes clusters and serverless containers."</p>
+          <div class="comp-flag">Before (The Bundling Trap)</div>
+          <p class="comp-text">"Passwordless authentication that eliminates credential-based attacks across your enterprise environment."</p>
         </div>
         <div class="comp-col comp-after">
-          <div class="comp-flag">After (Operational Outcome)</div>
-          <p class="comp-text">"Stop active container breakouts in milliseconds without deploying intrusive kernel modules or bottlenecking production workloads."</p>
+          <div class="comp-flag">After (Operational Wedge)</div>
+          <p class="comp-text">"Microsoft Entra and Okta FastPass protect daily logins. They do not re-establish who is behind a session when a credential is recovered or issued to a new device. That is where account takeover still happens after passwordless is deployed."</p>
         </div>
       </div>
     </div>
 
     <div class="teardown-block">
       <div class="teardown-header">
-        <div class="teardown-title">Sales Enablement // SIEM & Telemetry Aggregation</div>
-        <span class="teardown-tag">BATTLE CARD</span>
+        <div class="teardown-title">Non-Human Identity & Runtime // Live Session Control</div>
+        <span class="teardown-tag">CATEGORY POSITIONING</span>
       </div>
       <div class="comparison-grid">
         <div class="comp-col comp-before">
-          <div class="comp-flag">Before (Commodity Pitch)</div>
-          <p class="comp-text">"Rip-and-replace your existing legacy log manager with our faster, AI-driven correlation analytics platform."</p>
+          <div class="comp-flag">Before (Category Collision)</div>
+          <p class="comp-text">"Enterprise-grade cybersecurity orchestration platform for Managed Security Service Providers securing the mid-market."</p>
         </div>
         <div class="comp-col comp-after">
-          <div class="comp-flag">After (Wedge Positioning)</div>
-          <p class="comp-text">"Position as a pre-ingestion pipeline filter that slashes Splunk licensing costs by 40% in 48 hours without touching existing SOC detection rules."</p>
+          <div class="comp-flag">After (Runtime Wedge)</div>
+          <p class="comp-text">"CyberArk vaults credentials and schedules rotation. It does not enforce what a service account does with a credential while a session is live. When an identity escalates privilege at 2 a.m., the exposure window is between the last scan and the next one."</p>
         </div>
       </div>
     </div>
 
+    <!-- CONTACT SECTION -->
     <div id="contact" class="contact-box">
-      <h2>Request a 15-Minute Messaging Teardown</h2>
+      <h2>Name the Vendor You Keep Losing To</h2>
       <p>
-        Preparing for an outbound sprint, repositioning away from legacy incumbents, or launching a new product capability? Share your site or deck below for a direct messaging analysis.
+        Send the competitor name, your current website URL, and where deals typically stall: first call, technical evaluation, procurement, or the engineering veto. I will review the architecture and return a strategic assessment identifying where to attack their operational exposure.
       </p>
 
       <a href="mailto:contact@drmanazzamessaging.com" class="direct-email-badge">
@@ -660,24 +628,24 @@
       <form class="form-box" id="contact-form" action="https://formspree.io/f/mnpqggoq" method="POST">
         <div class="form-group">
           <label>YOUR NAME & TITLE</label>
-          <input type="text" name="name" class="form-input" placeholder="e.g. Alex Vance, Head of PMM" required />
+          <input type="text" name="name" class="form-input" placeholder="e.g. Alex Vance, VP of Sales" required />
         </div>
         <div class="form-group">
-          <label>COMPANY EMAIL</label>
+          <label>CORPORATE EMAIL</label>
           <input type="email" name="email" class="form-input" placeholder="alex@company.com" required />
         </div>
         <div class="form-group">
-          <label>CURRENT MESSAGING BOTTLENECK / PROJECT</label>
-          <textarea name="message" class="form-textarea" placeholder="Tell me what asset needs work (homepage copy, sales battle cards, or outbound) and your target go-to-market timeline..." required></textarea>
+          <label>COMPETITOR NAME & WHERE DEALS STALL</label>
+          <textarea name="message" class="form-textarea" placeholder="Tell me which incumbent is bundling against you and at what stage the deal drops off..." required></textarea>
         </div>
         <button type="submit" id="submit-btn" class="btn" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
-          Request Messaging Teardown
+          Request Strategic Assessment
         </button>
       </form>
     </div>
 
     <footer>
-      <div>© 2026 Dr. Manazza Batool. Cybersecurity Content & Messaging Strategist.</div>
+      <div>© 2026 Dr. Manazza Batool. Enterprise Cybersecurity Messaging Strategist.</div>
       <div style="display: flex; align-items: center; gap: 1.5rem;">
         <a href="mailto:contact@drmanazzamessaging.com" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #F3F4F6; text-decoration: none; font-weight: 500;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -719,7 +687,7 @@
         });
 
         if (response.ok) {
-          submitBtn.innerText = "✓ Teardown Request Transmitted!";
+          submitBtn.innerText = "✓ Strategic Assessment Requested!";
           submitBtn.classList.add("btn-success-state");
           form.reset();
 
